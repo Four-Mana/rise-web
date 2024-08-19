@@ -4,10 +4,10 @@ import { MobileNavbar } from "./MobileNavbar"
 export const Navbar = () => {
     return (
         <>
-            <div className="inset-x-0 top-0 z-40 md:hidden">
+            <div className="inset-x-0 top-0  md:hidden">
                 <MobileNavbar />
             </div>
-            <div className="inset-x-0 top-0 z-40 md:block hidden">
+            <div className="inset-x-0 top-0  md:block hidden">
                 <DesktopNavbar />
             </div>
         </>
