@@ -12,7 +12,7 @@ export default defineConfig({
     timeout: 45 * 1000
   },
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL: "http://localhost:4000",
     trace: 'on-first-retry',
     actionTimeout: 0,
     timezoneId: 'Europe/Madrid',
@@ -21,16 +21,18 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      testMatch: '!(*.mobile).spec.ts'
 
     },
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'Mobile chrome',
+      use: { ...devices['Pixel 5'] },
+      testMatch: '*.mobile.spec.ts'
     },
   ],
 
   webServer: {
-    command: 'pnpm playwright:dev',
-    url: 'http://127.0.0.1:3000/health-check',
+    command: isCi ? 'pnpm playwright:start' : 'pnpm playwright:dev',
+    url: 'http://127.0.0.1:4000/',
   },
 });

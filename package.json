@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "playwright:install": "pnpm exec playwright install",
+    "playwright:local": "pnpm exec playwright test --project='chromium'",
     "playwright:test": "pnpm exec playwright test",
     "playwright:dev": "export IS_PLAYWRIGHT=true && next dev -p 4000",
     "playwright:start": "export IS_PLAYWRIGHT=true && next start -p 4000",
