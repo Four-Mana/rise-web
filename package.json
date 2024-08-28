@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "playwright:test": "pnpm exec playwright test",
+    "playwright:dev": "export IS_PLAYWRIGHT=true && next dev -p 4000",
+    "playwright:start": "export IS_PLAYWRIGHT=true && next start -p 4000",
+    "playwright:build": "export IS_PLAYWRIGHT=true && next build",
+    "playwright:ci": "pnpm playwright:build && pnpm playwright:test"
   },
   "dependencies": {
     "@headlessui/react": "2.1.1",
@@ -22,6 +27,7 @@
     "styled-components": "^6.1.12"
   },
   "devDependencies": {
+    "is-ci": "^3.0.1",
     "@playwright/test": "^1.46.1",
     "@types/node": "^20",
     "@types/react": "^18",
