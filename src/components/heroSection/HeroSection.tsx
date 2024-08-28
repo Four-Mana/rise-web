@@ -4,7 +4,7 @@ import background from './_assets/bandatest.jpeg'
 
 export const HeroSection = () => {
     return (
-        <section className="relative max-h-screen" >
+        <section className="relative max-h-screen" data-testid='hero-section'>
             <div className="flex items-end justify-center w-full h-full">
                 <Image src={background}
                     alt="Foto"

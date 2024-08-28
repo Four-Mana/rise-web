@@ -11,3 +11,5 @@ export const getSanityUrl = (query: string) => {
     const encodedQuery = encodeURI(query).replace(/%20/g, '+');
     return `https://${projectId}.${useCdn ? 'apicdn' : 'api'}.sanity.io/v${apiVersion}/data/query/${dataset}?query=${encodedQuery}`;
 }
+
+export const isPlaywright = !!process.env.IS_PLAYWRIGHT
