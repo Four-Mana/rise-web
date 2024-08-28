@@ -13,7 +13,8 @@
     "playwright:dev": "export IS_PLAYWRIGHT=true && next dev -p 4000",
     "playwright:start": "export IS_PLAYWRIGHT=true && next start -p 4000",
     "playwright:build": "export IS_PLAYWRIGHT=true && next build",
-    "playwright:ci": "pnpm playwright:build && pnpm playwright:test"
+    "playwright:ci": "pnpm playwright:build && pnpm playwright:test",
+    "prettier": "pnpm exec prettier . --write"
   },
   "dependencies": {
     "@headlessui/react": "2.1.1",

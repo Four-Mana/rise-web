@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   playwright:
-    runs-on: 'ubuntu-arm-32-cores'
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

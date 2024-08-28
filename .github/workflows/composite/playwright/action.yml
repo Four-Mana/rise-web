@@ -35,10 +35,10 @@ runs:
       shell: bash
 
     - name: Run playwright tests
-    run: pnpm playwright:ci
-    shell: bash
-    env:
-      TZ: Europe/Madrid
+      run: pnpm playwright:ci
+      shell: bash
+      env:
+        TZ: Europe/Madrid
 
     - name: Upload test results
       uses: actions/upload-artifact@v4
