@@ -1,28 +1,33 @@
 import Image from "next/image";
-import { StaticImageData } from "next/image";  // Import type
+import { StaticImageData } from "next/image";
 
-// Define props interface
-interface HeroSectionProps {
+type HeroSectionProps = {
   logo: StaticImageData;
   background: StaticImageData;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ logo, background }) => {
   return (
-    <section className="relative w-full h-screen" data-testid="hero-section">
+    <section className="relative max-h-screen" data-testid='hero-section'>
       <div className="flex items-end justify-center w-full h-full">
         <Image
+          style={{
+            width: '140%',
+            height: 'auto',
+          }}
           src={background}
-          alt="Foto"
+          alt="Background Image"
           objectFit="cover"
-          className="w-full h-full object-cover" 
         />
-
         <Image
+          className="absolute bottom-8"
+          style={{
+            width: '50%',
+            height: 'auto',
+          }}
           src={logo}
           alt="Logo"
           objectFit="contain"
-          className="absolute bottom-[30%] w-[50%] h-auto"
         />
       </div>
     </section>
