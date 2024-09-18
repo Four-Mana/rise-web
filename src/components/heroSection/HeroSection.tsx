@@ -13,14 +13,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ logo, background }) =>
         <Image
           src={background}
           alt="Foto"
-          objectFit="cover"
           className="w-full h-full object-cover" 
         />
 
         <Image
           src={logo}
           alt="Logo"
-          objectFit="contain"
           className="absolute bottom-[30%] w-[50%] h-auto"
         />
       </div>

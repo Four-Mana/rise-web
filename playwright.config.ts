@@ -33,6 +33,7 @@ export default defineConfig({
 
   webServer: {
     command: isCi ? 'pnpm playwright:start' : 'pnpm playwright:dev',
+    reuseExistingServer: isCi ? false : true,
     url: 'http://127.0.0.1:4000/',
   },
 });
