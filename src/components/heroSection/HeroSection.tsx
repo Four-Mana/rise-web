@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { StaticImageData } from "next/image";  // Import type
+import { StaticImageData } from "next/image";
 
-// Define props interface
-interface HeroSectionProps {
+type HeroSectionProps = {
   logo: StaticImageData;
   background: StaticImageData;
 }
