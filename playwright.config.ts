@@ -9,10 +9,10 @@ export default defineConfig({
   globalSetup: './src/tests/global-setup.ts',
   reporter: [['html'], ['github']],
   expect: {
-    timeout: 45 * 1000
+    timeout: 45 * 1000,
   },
   use: {
-    baseURL: "http://localhost:4000",
+    baseURL: 'http://localhost:4000',
     trace: 'on-first-retry',
     actionTimeout: 0,
     timezoneId: 'Europe/Madrid',
@@ -21,13 +21,12 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-      testMatch: '!(*.mobile).spec.ts'
-
+      testMatch: '!(*.mobile).spec.ts',
     },
     {
       name: 'Mobile chrome',
       use: { ...devices['Pixel 5'] },
-      testMatch: '*.mobile.spec.ts'
+      testMatch: '*.mobile.spec.ts',
     },
   ],
 

@@ -1,2 +1,2 @@
-export * from './useIsHydrated'
-export * from './useHasPastHeight'
+export * from './useIsHydrated';
+export * from './useHasPastHeight';

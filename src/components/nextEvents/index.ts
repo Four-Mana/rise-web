@@ -1,1 +1,1 @@
-export * from './NextEvents'
+export * from './NextEvents';
