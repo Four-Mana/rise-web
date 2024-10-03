@@ -11,18 +11,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   background,
 }) => {
   return (
-    <section className="relative h-screen w-full" data-testid="hero-section">
-      <div className="flex h-full w-full items-end justify-center">
+    <section className="relative h-screen" data-testid="hero-section">
+      <div className="flex h-full w-full justify-center">
         <Image
           src={background}
-          alt="Foto"
-          className="h-full w-full object-cover"
+          alt="The band"
+          className="h-full w-screen object-cover"
         />
 
         <Image
           src={logo}
-          alt="Logo"
-          className="absolute bottom-[30%] h-auto w-[50%]"
+          alt="Rise logo"
+          className="absolute bottom-10 object-contain md:1/2 lg:w-2/5"
         />
       </div>
     </section>

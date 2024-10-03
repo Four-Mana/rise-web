@@ -61,8 +61,8 @@ export const NextEvents: React.FC = () => {
   const sortedEvents = sortEventsByDate(events);
 
   return (
-    <section className="relative h-full w-full bg-black py-10 text-white">
-      <div className="container mx-auto">
+    <section className="relative h-full w-full  bg-black p-8 text-white">
+      <div className="container mx-auto max-w-screen-xl">
         <div className="grid grid-cols-1 gap-6">
           <h2 className="mb-5 mr-24 text-center text-4xl font-bold">
             Próximos Conciertos
