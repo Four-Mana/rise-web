@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="mt-10">
       
-        <PdfView pdfFile="/terms&conditions.pdf" /> 
+        <PdfView pdfFile="/assets/terms&conditions.pdf" /> 
 
     </main>
   );

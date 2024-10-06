@@ -9,7 +9,7 @@ export default function Home() {
     <main className="mt-5">
       
       
-        <PdfView pdfFile="/privacy.pdf" /> 
+        <PdfView pdfFile="/assets/privacy.pdf" /> 
   
     </main>
   );

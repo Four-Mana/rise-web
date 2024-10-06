@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="mt-5">
      
-        <PdfView pdfFile="/avisolegal.pdf" /> 
+        <PdfView pdfFile="/assets/avisolegal.pdf" /> 
   
     </main>
   );
