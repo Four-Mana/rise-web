@@ -1,11 +1,15 @@
-import { PdfViewer } from "@/components/pdfViewer"; 
+'use client';
 
-export default function LegalPage() {
-  const pdfPath = "/assets/avisolegal.pdf"; 
+import dynamic from 'next/dynamic';
 
+const PdfView = dynamic(() => import('@/components/pdfView/PdfView').then(mod => mod.default), { ssr: false });
+
+export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between mt-10 h-screen bg-black"> 
-      <PdfViewer pdfPath={pdfPath} /> 
+    <main className="mt-5">
+     
+        <PdfView pdfFile="/avisolegal.pdf" /> 
+  
     </main>
   );
 }
