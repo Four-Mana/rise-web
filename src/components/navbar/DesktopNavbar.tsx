@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa6';
 import { SiYoutubemusic } from 'react-icons/si';
 export const DesktopNavbar = () => {
-  const isPastNavbar = useHasPastHeight(80);
+  const isPastNavbar = useHasPastHeight(40);
 
   return (
     <nav
