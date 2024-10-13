@@ -8,6 +8,7 @@ import {
   FaBandcamp,
 } from 'react-icons/fa6';
 import { SiYoutubemusic } from 'react-icons/si';
+import { Logo } from '../logo';
 export const DesktopNavbar = () => {
   const isPastNavbar = useHasPastHeight(40);
 
@@ -18,36 +19,26 @@ export const DesktopNavbar = () => {
     >
       <div className="flex items-center justify-between">
         <div>
-          <Link href="/">🐯</Link>
+          <Link href="/">
+            <Logo size='lg' />
+          </Link>
         </div>
 
-        <div className="ml-auto mr-2 flex gap-4 text-xl">
+        <div className="ml-auto mr-6 flex gap-4 text-xl">
           <Link
-            href="/banda"
+            href="/band"
             className="text-sm font-semibold leading-tight tracking-tighter text-white hover:text-yellow-500"
           >
             La Banda
           </Link>
           <Link
-            href="/discografia"
-            className="text-sm font-semibold leading-tight tracking-tighter text-white hover:text-yellow-500"
-          >
-            Discografía
-          </Link>
-          <Link
-            href="/tour"
-            className="text-sm font-semibold leading-tight tracking-tighter text-white hover:text-yellow-500"
-          >
-            Tour
-          </Link>
-          <Link
-            href="/tienda"
+            href="/shop"
             className="text-sm font-semibold leading-tight tracking-tighter text-white hover:text-yellow-500"
           >
             Tienda
           </Link>
           <Link
-            href="/contacto"
+            href="/contact"
             className="text-sm font-semibold leading-tight tracking-tighter text-white hover:text-yellow-500"
           >
             Contacto

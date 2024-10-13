@@ -5,6 +5,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import Link from 'next/link';
 import React from 'react';
 import { MdMenu } from 'react-icons/md';
+import { Logo } from '../logo';
 
 export const MobileNavbar = () => {
   const isHydrated = useIsHydrated();
@@ -17,7 +18,9 @@ export const MobileNavbar = () => {
     >
       <div className="flex items-center justify-between">
         <div>
-          <Link href="/">🐯</Link>
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
         <Menu>
           <MenuButton disabled={!isHydrated}>
@@ -33,7 +36,7 @@ export const MobileNavbar = () => {
               <Link href="/">Home</Link>
             </MenuItem>
             <MenuItem>
-              <Link href="/about-us">About us</Link>
+              <Link href="/band">Band</Link>
             </MenuItem>
           </MenuItems>
         </Menu>

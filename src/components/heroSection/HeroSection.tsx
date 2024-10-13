@@ -16,12 +16,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <Image
           src={background}
           alt="The band"
+          draggable={false}
           className="h-full w-screen object-cover"
         />
 
         <Image
           src={logo}
           alt="Rise logo"
+          draggable={false}
           className="absolute bottom-10 object-contain md:1/2 lg:w-2/5"
         />
       </div>
