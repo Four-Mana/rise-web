@@ -10,7 +10,7 @@ interface PdfViewProps {
   pdfFile: string;
 }
 
-const PdfView = ({ pdfFile }: PdfViewProps) => {
+export const PdfView = ({ pdfFile }: PdfViewProps) => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [error, setError] = useState<string | null>(null);
@@ -32,8 +32,7 @@ const PdfView = ({ pdfFile }: PdfViewProps) => {
     <>
       {error && <div className="text-red-600 mb-10">{error}</div>}
 
-      <div className='flex flex-col items-center justify-center overflow-hidden py-10'>
-
+      <div className='flex flex-col min-h-screen items-center justify-center overflow-hidden py-10'>
         <Document
           file={pdfFile}
           onLoadSuccess={onLoadSuccess}

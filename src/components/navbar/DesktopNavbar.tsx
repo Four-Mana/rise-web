@@ -7,7 +7,7 @@ import {
   FaInstagram,
   FaBandcamp,
 } from 'react-icons/fa6';
-import { SiYoutubemusic } from 'react-icons/si';
+import { SiSpotify, SiYoutubemusic } from 'react-icons/si';
 import { Logo } from '../logo';
 export const DesktopNavbar = () => {
   const isPastNavbar = useHasPastHeight(40);
@@ -46,6 +46,12 @@ export const DesktopNavbar = () => {
         </div>
 
         <div className="flex gap-3">
+          <Link
+            href="https://open.spotify.com/artist/5AdHsX8ljUSI35pVTjdWa8?si=5vy8NIZgRJOdw6-Vg_Gpdg"
+            className="text-white hover:text-yellow-500 transition-colors"
+          >
+            <SiSpotify size={22} />
+          </Link>
           <Link
             href="https://es-es.facebook.com/RiseOrDieOfficial"
             className="text-white hover:text-yellow-500"
