@@ -1,5 +1,5 @@
 import { HeroSection } from '@/components/heroSection';
-import { NextEvents } from '@/components/nextEvents';
+
 import logo from '@/components/_assets/logoBand.png';
 import background from '@/components/_assets/heroPicture2.jpg';
 import { YoutubeVideo } from '@/components/youtubeVideo';
