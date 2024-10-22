@@ -40,3 +40,42 @@ body {
 .react-pdf__Page__annotations {
   display: none;
 }
+.divider-bottom-home {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider-bottom-home svg {
+  position: relative;
+  display: block;
+  width: calc(132% + 1.3px);
+  height: 69px;
+}
+
+.divider-bottom-home  .shape-fill {
+  fill: #000000;
+}
+.divider-top-album  {
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.divider-top-album svg {
+  position: relative;
+  display: block;
+  width: calc(132% + 1.3px);
+  height: 69px;
+}
+
+.divider-top-album  .shape-fill {
+  fill: #000000;
+}
