@@ -5,7 +5,6 @@ import bandSit from "@/components/_assets/band/bandSit.jpg"
 
 import { Highlight } from "@/components/highlight";
 import { Album } from "@/components/home";
-import { variant } from '../../components/home/album';
 
 export const metadata = {
   title: "The band - Rise",
