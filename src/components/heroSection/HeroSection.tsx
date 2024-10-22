@@ -17,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           src={background}
           alt="The band"
           draggable={false}
-          className="h-full w-screen object-cover"
+          className="h-full w-screen object-cover "
         />
 
         <Image
