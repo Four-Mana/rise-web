@@ -25,6 +25,7 @@ export const PurchaseForm = () => {
     <form name="purchase-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit} >
       <input type="hidden" name="purchase-form" value="purchase" />
       <div className="flex flex-col pb-12 gap-4 w-full max-w-lg mx-auto pt-6">
+        <input type="hidden" name="form-name" value="purchase-form" />
         <label className='font-semibold tracking-tighter text-white/80' htmlFor="name">Your Name: </label>
         <Input
           type="text" name="name"
