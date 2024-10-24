@@ -11,6 +11,23 @@ export const metadata = {
 }
 
 export default function Shop() {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    try {
+      await fetch('/__forms.html', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
+  };
+
   return (
     <main className="flex flex-col items-center justify-between mt-20 bg-zinc-900 gap-6">
       <Logo variant="orangeHighlight" size="xl" />
@@ -23,7 +40,8 @@ export default function Shop() {
         <p className="text-center">
           Rellena tus datos y nos pondremos en contacto contigo lo antes posible
         </p>
-        <form name="contact" method="POST" data-netlify="true" >
+        <form name="purchase-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit} >
+          <input type="hidden" name="form-name" value="purchase-form" />
           <div className="flex flex-col pb-12 gap-4 w-full max-w-lg mx-auto pt-6">
             <label className='font-semibold tracking-tighter text-white/80' htmlFor="name">Your Name: </label>
             <Input
