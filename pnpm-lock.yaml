@@ -11,6 +11,9 @@ importers:
       '@headlessui/react':
         specifier: 2.1.1
         version: 2.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@netlify/plugin-nextjs':
+        specifier: ^5.8.1
+        version: 5.8.1
       '@next/env':
         specifier: ^14.2.7
         version: 14.2.7
@@ -229,6 +232,10 @@ packages:
   '@mapbox/node-pre-gyp@1.0.11':
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
     hasBin: true
+
+  '@netlify/plugin-nextjs@5.8.1':
+    resolution: {integrity: sha512-WB1N0FslhWZ1yAVYTcB6CcFrFOUSQ0O2LfavYZrbAypeNxu2I+oO+cgmhfDgZ8Eoq1g4EMeoIGMkNoZ4ogZTsg==}
+    engines: {node: '>=18.0.0'}
 
   '@next/env@14.2.5':
     resolution: {integrity: sha512-/zZGkrTOsraVfYjGP8uM0p6r0BDT6xWpkjdVbcz66PJVSpwXX3yNiRycxAuDfBKGWBrZBXRuK/YVlkNgxHGwmA==}
@@ -2430,6 +2437,8 @@ snapshots:
       - encoding
       - supports-color
     optional: true
+
+  '@netlify/plugin-nextjs@5.8.1': {}
 
   '@next/env@14.2.5': {}
 
