@@ -39,7 +39,7 @@ export const MobileNavbar = () => {
               <Link href="/band">Band</Link>
             </MenuItem>
             <MenuItem>
-              <Link href="/band">Shop</Link>
+              <Link href="/shop">Shop</Link>
             </MenuItem>
           </MenuItems>
         </Menu>

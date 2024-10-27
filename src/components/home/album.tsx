@@ -46,9 +46,9 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
 
 export const MusicBar = () => {
   return (
-    <div className='mt-12 grid gap-6'>
+    <div className='mt-12 grid md:gap-6 gap-2'>
       <h1 className='tracking-wide font-light text-2xl text-center text-white'>Ready for the new <span className='text-primary-400'>era</span>?</h1>
-      <div className='flex flex-wrap gap-6 md:gap-10 w-full py-4 px-10 bg-white/30 justify-center items-center rounded-full'>
+      <div className='flex flex-wrap gap-6 md:gap-10 w-full py-4 md:px-10 bg-white/30 justify-center items-center rounded-full'>
         <Link
           href="https://risemetalband.bandcamp.com/album/derange#"
           className="text-white hover:text-yellow-500 transition-colors"
