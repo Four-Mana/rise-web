@@ -15,12 +15,13 @@ const variants = {
 const sizes = {
   sm: 52,
   md: 64,
-  lg: 88
+  lg: 88,
+  xl: 300
 }
 
 export type LogoProps = {
   variant?: LogoVariant;
-  size?: "sm" | "md" | "lg"
+  size?: "sm" | "md" | "lg" | "xl"
 }
 
 export const Logo = ({ variant = "orangeHighlight", size = "md" }: LogoProps) => {

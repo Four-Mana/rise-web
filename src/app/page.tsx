@@ -1,5 +1,4 @@
 import { HeroSection } from '@/components/heroSection';
-
 import logo from '@/components/_assets/logoBand.png';
 import background from '@/components/_assets/heroPicture2.jpg';
 import { YoutubeVideo } from '@/components/youtubeVideo';
@@ -26,8 +25,6 @@ export default function Home() {
       </section>
 
       <Album />
-      
-      {/* <NextEvents /> */}
     </main>
   );
 }
