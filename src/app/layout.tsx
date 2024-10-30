@@ -6,8 +6,8 @@ import { Footer, Navbar } from '@/components';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Home - Rise',
-  description: 'The official website for Rise band. Get info about our next albums and events or buy yourself some merch',
+  title: 'Rise metal',
+  description: 'Web oficial de la banda Rise. Obtén información sobre nuestros próximos álbumes y eventos o cómprate algo de la banda.',
 };
 
 export default function RootLayout({

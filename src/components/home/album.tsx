@@ -39,7 +39,7 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
           </p>
           {!withoutBar && (
             <MusicBar 
-              text={<>Ready for the new <Highlight>era</Highlight>?</>}
+              text={<>¿Preparados para la nueva <Highlight>era</Highlight>?</>}
             />
           )}
         </div>

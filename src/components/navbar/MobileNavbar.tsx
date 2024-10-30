@@ -33,13 +33,13 @@ export const MobileNavbar = () => {
             className="z-50 flex origin-top-left flex-col gap-2 rounded-md bg-white px-6 py-3 text-black transition duration-100 ease-out"
           >
             <MenuItem>
-              <Link href="/">Home</Link>
+              <Link href="/">Menú</Link>
             </MenuItem>
             <MenuItem>
-              <Link href="/band">Band</Link>
+              <Link href="/band">La Banda</Link>
             </MenuItem>
             <MenuItem>
-              <Link href="/shop">Shop</Link>
+              <Link href="/shop">Tienda</Link>
             </MenuItem>
           </MenuItems>
         </Menu>
