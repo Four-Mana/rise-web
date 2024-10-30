@@ -27,9 +27,7 @@ export default function Contact() {
         <div className="w-full flex justify-center">
           <div className="max-w-xl w-full"> 
             <MusicBar 
-              preHighlightText='También puedes seguirnos en nuestras Redes'
-              highlightedText='' 
-              postHighlightText='' 
+              text='También puedes seguirnos en nuestras Redes' 
             />
           </div>
         </div>
