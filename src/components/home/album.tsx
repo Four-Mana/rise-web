@@ -5,6 +5,7 @@ import { SiSpotify, SiYoutubemusic } from 'react-icons/si'
 import breathingAgain from './assets/breathingAgain.png'
 import Image from 'next/image'
 import classNames from 'classnames'
+import { Highlight } from "@/components/highlight";
 
 export type variant = 'black' | 'transparent';
 export type AlbumProps = {
@@ -36,50 +37,41 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
             Más rabiosos, más furiosos y desafiantes que <span className='font-semibold text-primary-400'>NUNCA</span>
           </p>
           {!withoutBar &&
-            <MusicBar />
+            <MusicBar preHighlightText={'Ready for the new'} highlightedText='era' postHighlightText='?'  />
           }
         </div>
       </div>
     </section>
   )
 }
-
-export const MusicBar = () => {
+type MusicBarProps = {
+  preHighlightText: string;
+  highlightedText: string;
+  postHighlightText: string;
+};
+export const MusicBar = ({ preHighlightText, highlightedText, postHighlightText }: MusicBarProps) => {
   return (
     <div className='mt-12 grid md:gap-6 gap-2'>
-      <h1 className='tracking-wide font-light text-2xl text-center text-white'>Ready for the new <span className='text-primary-400'>era</span>?</h1>
+      <h1 className='tracking-wide font-light text-2xl text-center text-white'>
+        {preHighlightText} <Highlight>{highlightedText}</Highlight> {postHighlightText}
+      </h1>
       <div className='flex flex-wrap gap-6 md:gap-10 w-full py-4 md:px-10 bg-white/30 justify-center items-center rounded-full'>
-        <Link
-          href="https://risemetalband.bandcamp.com/album/derange#"
-          className="text-white hover:text-yellow-500 transition-colors"
-        >
+        <Link href="https://risemetalband.bandcamp.com/album/derange#" className="text-white hover:text-yellow-500 transition-colors">
           <FaBandcamp size={24} />
         </Link>
-        <Link
-          href="https://instagram.com/rise_metalband/"
-          className="text-white hover:text-yellow-500 transition-colors"
-        >
+        <Link href="https://instagram.com/rise_metalband/" className="text-white hover:text-yellow-500 transition-colors">
           <FaInstagram size={24} />
         </Link>
-        <Link
-          href="https://open.spotify.com/artist/5AdHsX8ljUSI35pVTjdWa8?si=5vy8NIZgRJOdw6-Vg_Gpdg"
-          className="text-white hover:text-yellow-500 transition-colors"
-        >
+        <Link href="https://open.spotify.com/artist/5AdHsX8ljUSI35pVTjdWa8?si=5vy8NIZgRJOdw6-Vg_Gpdg" className="text-white hover:text-yellow-500 transition-colors">
           <SiSpotify size={52} />
         </Link>
-        <Link
-          href="https://www.youtube.com/@risebandofficial?si=b2WRmfNVw6B1kK8U"
-          className="text-white hover:text-yellow-500 transition-colors"
-        >
+        <Link href="https://www.youtube.com/@risebandofficial?si=b2WRmfNVw6B1kK8U" className="text-white hover:text-yellow-500 transition-colors">
           <FaYoutube size={24} />
         </Link>
-        <Link
-          href="https://music.youtube.com/channel/UCFl15L655YrI3f4VvB5HLBg?si=aD6q0c5LFQrMjjmn"
-          className="text-white hover:text-yellow-500 transition-colors"
-        >
+        <Link href="https://music.youtube.com/channel/UCFl15L655YrI3f4VvB5HLBg?si=aD6q0c5LFQrMjjmn" className="text-white hover:text-yellow-500 transition-colors">
           <SiYoutubemusic size={24} />
         </Link>
       </div>
     </div>
-  )
+  );
 }
