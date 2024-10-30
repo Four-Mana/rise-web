@@ -13,7 +13,7 @@ export default function Home() {
         <div className='grid gap-12 max-w-screen-lg mx-auto'>
           <p className='max-w-screen-md mx-auto font-light tracking-tighter text-xl text-white text-center'>
             ¡Mierda! Si no sabes por qué has entrado en la web
-            <span className='text-primary-400'>¡jódete!</span> habrá sido culpa de Zuckerberg o Bezos, ya que estás, échale un vistazo y ¡dale al play! ¡Thrash! En toda la boca.
+            <span className='text-primary-400'> ¡jódete!</span> habrá sido culpa de Zuckerberg o Bezos, ya que estás, échale un vistazo y ¡dale al play! ¡Thrash! En toda la boca.
           </p>
           <YoutubeVideo id="KAonpOplglo" title='test' />
         </div>
