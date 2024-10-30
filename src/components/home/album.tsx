@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { ReactNode } from 'react';
-import { FaBandcamp, FaInstagram, FaYoutube } from 'react-icons/fa6';
-import { SiSpotify, SiYoutubemusic } from 'react-icons/si';
+import { FaBandcamp, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa6';
+import { SiSpotify } from 'react-icons/si';
 import breathingAgain from './assets/breathingAgain.png';
 import Image from 'next/image';
 import classNames from 'classnames';
@@ -60,7 +60,7 @@ export const MusicBar = ({ text }: MusicBarProps) => {
         {text}
       </h1>
       <div className='flex flex-wrap gap-6 md:gap-10 w-full py-4 md:px-10 bg-white/30 justify-center items-center rounded-full'>
-        <Link href="https://risemetalband.bandcamp.com/album/derange#" className="text-white hover:text-yellow-500 transition-colors">
+        <Link href="https://risemetalband.bandcamp.com/music" className="text-white hover:text-yellow-500 transition-colors">
           <FaBandcamp size={24} />
         </Link>
         <Link href="https://instagram.com/rise_metalband/" className="text-white hover:text-yellow-500 transition-colors">
@@ -69,11 +69,11 @@ export const MusicBar = ({ text }: MusicBarProps) => {
         <Link href="https://open.spotify.com/artist/5AdHsX8ljUSI35pVTjdWa8?si=5vy8NIZgRJOdw6-Vg_Gpdg" className="text-white hover:text-yellow-500 transition-colors">
           <SiSpotify size={52} />
         </Link>
-        <Link href="https://www.youtube.com/@risebandofficial?si=b2WRmfNVw6B1kK8U" className="text-white hover:text-yellow-500 transition-colors">
+        <Link href="https://www.youtube.com/@risebandoffical" className="text-white hover:text-yellow-500 transition-colors">
           <FaYoutube size={24} />
         </Link>
-        <Link href="https://music.youtube.com/channel/UCFl15L655YrI3f4VvB5HLBg?si=aD6q0c5LFQrMjjmn" className="text-white hover:text-yellow-500 transition-colors">
-          <SiYoutubemusic size={24} />
+        <Link href="https://www.tiktok.com/@risebandofficial" className="text-white hover:text-yellow-500 transition-colors">
+          <FaTiktok size={24} />
         </Link>
       </div>
     </div>

@@ -10,7 +10,7 @@ const PdfView = dynamic(() => import('@/components/pdfView/PdfView')
 export default function Home() {
   return (
     <main className="mt-10">
-      <h1 className='text-center text-3xl font-bold tracking-tighter pt-16 pb-8'>Aviso Legal</h1>
+      <h1 className='text-center text-3xl font-bold tracking-tighter pt-16 pb-8'>Términos & Condiciones</h1>
       <PdfView pdfFile="/assets/terms&conditions.pdf" />
     </main>
   );
