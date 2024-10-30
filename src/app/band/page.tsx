@@ -7,8 +7,8 @@ import { Highlight } from "@/components/highlight";
 import { Album } from "@/components/home";
 
 export const metadata = {
-  title: "The band - Rise",
-  description: "Know more about Rise band"
+  title: "La Banda - Rise",
+  description: "Conoce más sobre Rise"
 }
 
 export default function Band() {

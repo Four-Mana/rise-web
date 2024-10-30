@@ -25,7 +25,7 @@ export const ContactForm = () => {
     <form name="contact-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
       <input type="hidden" name="form-name" value="contact-form" />
       <div className="flex flex-col pb-12 gap-4 w-full max-w-lg mx-auto pt-6">
-        <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">Your Name: </label>
+        <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">Nombre: </label>
         <Input
           type="text" name="name"
           className={classNames(
@@ -33,7 +33,7 @@ export const ContactForm = () => {
             'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
           )}
         />
-        <label className="font-semibold tracking-tighter text-white/80" htmlFor="email">Your Email: </label>
+        <label className="font-semibold tracking-tighter text-white/80" htmlFor="email">Correo electrónico: </label>
         <Input
           type="email" name="email"
           className={classNames(
@@ -41,7 +41,7 @@ export const ContactForm = () => {
             'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
           )}
         />
-        <label className="font-semibold tracking-tighter text-white/80" htmlFor="message">Message: </label>
+        <label className="font-semibold tracking-tighter text-white/80" htmlFor="message">Mensaje: </label>
         <textarea
           name="message"
           className={classNames(
@@ -50,7 +50,7 @@ export const ContactForm = () => {
           )}
         ></textarea>
         <button className="bg-primary-400 rounded-sm w-fit px-10 font-black text-white py-2 self-end" type="submit">
-          Contact
+          Contáctanos
         </button>
       </div>
     </form>

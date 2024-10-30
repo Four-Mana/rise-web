@@ -10,7 +10,7 @@ const PdfView = dynamic(() => import('@/components/pdfView/PdfView')
 export default function Home() {
   return (
     <main className="mt-5">
-      <h1 className='text-center text-3xl font-bold tracking-tighter pt-16 pb-8'>Privacy</h1>
+      <h1 className='text-center text-3xl font-bold tracking-tighter pt-16 pb-8'>Privacidad</h1>
       <PdfView pdfFile="/assets/privacy.pdf" />
     </main>
   );

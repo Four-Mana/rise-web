@@ -5,8 +5,8 @@ import { Album } from "@/components/home";
 import { PurchaseForm } from "@/components/shop/purchase-form";
 
 export const metadata = {
-  title: "The shop - Rise",
-  description: "Buy your merch and albums"
+  title: "La Tienda - Rise",
+  description: "Compra nuestra mercancía y álbumes"
 }
 
 export default function Shop() {

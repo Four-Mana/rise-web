@@ -47,9 +47,9 @@ export const PdfView = ({ pdfFile }: PdfViewProps) => {
         {
           numPages && (
             <div className="flex gap-2 items-center w-fit pt-6">
-              {pageNumber > 1 && <button className='w-24 font-bold px-2 py-1 bg-primary-500 hover:bg-primary-200 text-neutral-800 rounded-sm' onClick={goToPrevPage}>Previous</button>}
-              <span className='px-8'>Page {pageNumber} of {numPages}</span>
-              {pageNumber !== numPages && <button className='w-24 font-bold px-2 py-1 bg-primary-500 hover:bg-primary-200 text-neutral-800 rounded-sm' onClick={goToNextPage} >Next</button>}
+              {pageNumber > 1 && <button className='w-24 font-bold px-2 py-1 bg-primary-500 hover:bg-primary-200 text-neutral-800 rounded-sm' onClick={goToPrevPage}>Anterior</button>}
+              <span className='px-8'>Página {pageNumber} de {numPages}</span>
+              {pageNumber !== numPages && <button className='w-24 font-bold px-2 py-1 bg-primary-500 hover:bg-primary-200 text-neutral-800 rounded-sm' onClick={goToNextPage} >Siguiente</button>}
             </div>
           )
         }
