@@ -8,7 +8,7 @@ import {
   FaBandcamp,
   FaTiktok
 } from 'react-icons/fa6';
-import { SiSpotify} from 'react-icons/si';
+import { SiSpotify } from 'react-icons/si';
 import { Logo } from '../logo';
 export const DesktopNavbar = () => {
   const isPastNavbar = useHasPastHeight(40);
@@ -66,14 +66,12 @@ export const DesktopNavbar = () => {
           >
             <FaInstagram size={24} />
           </Link>
-
           <Link
             href="https://www.youtube.com/@risebandoffical"
             className="text-white hover:text-yellow-500"
           >
             <FaYoutube size={24} />
           </Link>
-
           <Link
             href="https://risemetalband.bandcamp.com/music"
             className="text-white hover:text-yellow-500"

@@ -38,8 +38,8 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
             Más rabiosos, más furiosos y desafiantes que <span className='font-semibold text-primary-400'>NUNCA</span>
           </p>
           {!withoutBar && (
-            <MusicBar 
-              text={<>¿Preparados para la nueva <Highlight>era</Highlight>?</>}
+            <MusicBar
+              header={<>¿Preparados para la nueva <Highlight>era</Highlight>?</>}
             />
           )}
         </div>
@@ -50,14 +50,14 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
 
 
 type MusicBarProps = {
-  text: ReactNode;
+  header?: ReactNode;
 };
 
-export const MusicBar = ({ text }: MusicBarProps) => {
+export const MusicBar = ({ header }: MusicBarProps) => {
   return (
     <div className='mt-12 grid md:gap-6 gap-2'>
       <h1 className='tracking-wide font-light text-2xl text-center text-white'>
-        {text}
+        {header}
       </h1>
       <div className='flex flex-wrap gap-6 md:gap-10 w-full py-4 md:px-10 bg-white/30 justify-center items-center rounded-full'>
         <Link href="https://risemetalband.bandcamp.com/music" className="text-white hover:text-yellow-500 transition-colors">
