@@ -1,6 +1,6 @@
 import { HeroSection } from '@/components/heroSection';
 import logo from '@/components/_assets/logoBand.png';
-import background from '@/components/_assets/heroPicture2.jpg';
+import background from '../../public/background.jpg'
 import { YoutubeVideo } from '@/components/youtubeVideo';
 import { Album } from '@/components/home';
 
