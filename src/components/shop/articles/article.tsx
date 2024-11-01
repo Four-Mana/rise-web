@@ -1,32 +1,40 @@
+import classNames from 'classnames';
 import React, { ReactNode } from 'react'
+
 
 export type ArticleProp = {
   image: ReactNode;
-  description: ReactNode;
+  back?: ReactNode;
+  name: string;
   price: string;
-  variants: string;
+  variants?: string;
 }
 
-export const Article = ({ image, description, price = "50.00$", variants = "XS S M L XL" }: ArticleProp) => {
+export const Article = ({ image, back, name, price, variants }: ArticleProp) => {
+
+  const imageStyle = classNames("max-w-64 max-h-64", {
+    "group-hover:hidden": !!back
+  })
+
   return (
     <div className='w-full flex'>
-      <div>
-
-        <div className="w-full bg-zinc-900 h-80 md:h-96 flex items-center row-start-4 md:row-start-2 md:col-start-2 pb-36 overflow-hidden relative">
-          {/* <Image
-            src={bandHigh}
-            alt="Image from Rise band"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="100% 50%"
-            /> */}
-          {image}
+      <div className='flex flex-col'>
+        <div className=" bg-zinc-900 flex items-center justify-center overflow-hidden relative group">
+          <div className={imageStyle}>{image}</div>
+          {back && (
+            <div className="max-w-64 max-h-64 hidden group-hover:flex">
+              {back}
+            </div>
+          )}
         </div>
-
-        <span className='text-secondary tracking-wider font-black'>{price}</span>
-        <span className='text-white tracking-wider font-black'>{variants}</span>
+        <div className='flex flex-col gap-2 pt-2 '>
+          <span className='text-white text-xl tracking-wider font-black'>{name}</span>
+          <div className='flex flex-row justify-between '>
+            <span className='text-white tracking-wider font-black'>{variants}</span>
+            <span className='text-white tracking-wider font-black'>{price}</span>
+          </div>
+        </div>
       </div>
-      {description}
     </div>
   )
 }

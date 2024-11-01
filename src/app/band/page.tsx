@@ -38,8 +38,10 @@ export default function Band() {
             src={bandHigh}
             alt="Image from Rise band"
             layout="fill"
-            objectFit="cover"
-            objectPosition="100% 30%"
+            style={{
+              objectFit: "cover",
+              objectPosition: "100% 30%"
+            }}
           />
         </div>
       </div >

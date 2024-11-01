@@ -42,7 +42,7 @@ export const MobileNavbar = () => {
               <Link href="/shop">Tienda</Link>
             </MenuItem>
             <MenuItem>
-              <Link href="/contacto">Contacto</Link>
+              <Link href="/contact">Contacto</Link>
             </MenuItem>
           </MenuItems>
         </Menu>

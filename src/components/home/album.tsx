@@ -21,7 +21,7 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
 
   return (
     <section className={sectionStyles}>
-      <div className='mx-auto grid md:grid-cols-2 max-w-5xl max-h-screen gap-x-6 py-20'>
+      <div className='mx-auto grid md:grid-cols-2 max-w-5xl gap-y-6 md:gap-y-0 gap-x-6 py-20'>
         <div className="mx-auto w-5/6 aspect-square bg-black">
           <Image
             src={breathingAgain}
