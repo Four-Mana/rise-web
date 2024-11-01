@@ -9,7 +9,7 @@ export const PurchaseForm = () => {
 
     const formData = new FormData(event.currentTarget);
     try {
-      await fetch('/__forms.html', {
+      await fetch('/__purchase-form.html', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
