@@ -1,8 +1,8 @@
 'use client'
-import { Checkbox, Input } from '@headlessui/react';
+import { Input } from '@headlessui/react';
 import classNames from 'classnames';
 import React, { ChangeEvent, useState } from 'react'
-import { BiCheck, BiCheckCircle } from 'react-icons/bi';
+import { BiCheckCircle } from 'react-icons/bi';
 
 export const PurchaseForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -107,7 +107,13 @@ export const PurchaseForm = () => {
             Album T-shirt
           </label>
         </div>
-        <button className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end" type="submit">Enviar</button>
+        <button
+          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end disabled:bg-primary-100"
+          type="submit"
+          disabled={!selectedItems.album && !selectedItems['album-tshirt'] && !selectedItems['frank-tshirt']}
+        >
+          Enviar
+        </button>
       </div>
     </form>
   )
