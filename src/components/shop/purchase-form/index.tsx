@@ -8,14 +8,6 @@ import { ArticleCheckbox } from './checkbox-article';
 
 export const PurchaseForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [selectedItems, setSelectedItems] = useState<Record<string, string | boolean>>({});
-
-  const handleCheckboxChange = (name: string, value: string | boolean) => {
-    setSelectedItems((prevItems) => ({
-      ...prevItems,
-      [name]: value,
-    }));
-  };
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -54,14 +46,14 @@ export const PurchaseForm = () => {
           <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">
             Nombre:
           </label>
-          <Input type="text" name="name" placeholder="Carlos Garcia" className={inputClassNames} />
+          <Input type="text" name="name" required placeholder="Carlos Garcia" className={inputClassNames} />
         </div>
 
         <div className='grid gap-4'>
           <label className="font-semibold tracking-tighter text-white/80" htmlFor="email">
             Correo eléctronico:
           </label>
-          <Input type="email" name="email" placeholder="carlosgarcia@gmail.com" className={inputClassNames} />
+          <Input type="email" name="email" required placeholder="carlosgarcia@gmail.com" className={inputClassNames} />
         </div>
 
         <label className="font-semibold tracking-tighter text-white/80 mb-2 block">Elige tu merch</label>
@@ -70,19 +62,16 @@ export const PurchaseForm = () => {
             <ArticleCheckbox
               key={article.name}
               name={article.name}
-              // {...(article.variants && { options: article.variants.split(" ") })}
               options={article.variants?.split(" ") || ["on"]}
               singleOption={!article.variants}
               price={article.price}
-              onChange={(value) => handleCheckboxChange(article.name, value)}
             />
           ))}
         </div>
 
         <button
-          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 col-start-2 ml-auto"
+          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 col-start-2 ml-auto "
           type="submit"
-          disabled={!Object.values(selectedItems).some((item) => item)}
         >
           Enviar
         </button>
