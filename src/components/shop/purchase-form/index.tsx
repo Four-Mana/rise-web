@@ -38,6 +38,11 @@ export const PurchaseForm = () => {
 
   return (
     <form name="purchase-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit} >
+      <p className="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
       <input type="hidden" name="purchase-form" value="purchase" />
       <div className="flex flex-col pb-12w-full max-w-lg mx-auto pt-6 px-6 gap-4">
         <input type="hidden" name="form-name" value="purchase-form" />
