@@ -15,6 +15,7 @@ export const Articles = () => {
                 src={front}
                 alt={description}
                 draggable={false}
+                placeholder='blur'
                 style={{
                   objectFit: "cover",
                   width: 264,
@@ -29,6 +30,7 @@ export const Articles = () => {
                   src={back}
                   alt={description}
                   draggable={false}
+                  placeholder='blur'
                   style={{
                     objectFit: "cover",
                     width: 264,
@@ -41,7 +43,6 @@ export const Articles = () => {
             key={front.src}
           />
         ))}
-
       </div>
     </div>
   )

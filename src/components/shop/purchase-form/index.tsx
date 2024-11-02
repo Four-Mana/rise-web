@@ -1,4 +1,5 @@
 'use client'
+import { Highlight } from '@/components/highlight';
 import { Input } from '@headlessui/react';
 import classNames from 'classnames';
 import React, { ChangeEvent, useState } from 'react'
@@ -41,7 +42,7 @@ export const PurchaseForm = () => {
   };
 
   if (isSubmitted) {
-    <SuccessPurchase />
+    return <SuccessPurchase />
   }
 
   return (
@@ -121,22 +122,11 @@ export const PurchaseForm = () => {
 
 export const SuccessPurchase = () => {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center py-20'>
       <BiCheckCircle size={64} className='text-green-400' />
-      <h3 className='tracking-tight font-light text-4xl text-white text-center pb-6'>
-        Tomamos nota. Te contactaremos pronto para tramitar la compra.
+      <h3 className='tracking-tight font-light text-4xl text-white text-center pb-6 w-2/3'>
+        Tomamos nota.<br /> Te contactaremos <Highlight>pronto</Highlight> para tramitar la compra.
       </h3>
     </div>
   )
 }
-
-// export const ProductCheckbox = ({ name, checked, onChange }) => {
-//   return (
-//     <Checkbox
-//       name=''
-//       onChange={ }
-//     >
-//       <BiCheck />
-//     </Checkbox>
-//   )
-// }
