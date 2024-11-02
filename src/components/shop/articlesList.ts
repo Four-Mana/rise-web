@@ -11,7 +11,8 @@ export type articleListType = {
   description: string;
   price: string;
   variants?: string;
-}
+  blurHash?: string;
+};
 
 export const articlesList: articleListType[] = [
   {
@@ -20,19 +21,22 @@ export const articlesList: articleListType[] = [
     description: "",
     name: "Frank T-Shirt",
     price: "50.00$",
-    variants: "XS S M L XL"
+    variants: "XS S M L XL",
+    blurHash: "L8Ihplof00WBt6fQ~qof00ofofWB" 
   },
   {
     front: AlbumFrontImg,
     description: "",
     name: "Breathing Again T-Shirt",
     price: "50.00$",
-    variants: "XS S M L XL"
+    variants: "XS S M L XL",
+    blurHash: "]%KBREj[~qkC-;RjayRjayWB%MaykCj[Rj-;fQtRj@jY-;j[n%j[WBkWj[n$fQWCxafQM{jtV@jFj[R*ayaetRfQRjj[R*" 
   },
   {
     front: AlbumImg,
     name: "Breathing Again Album",
     description: "",
-    price: "50.00$"
+    price: "50.00$",
+    blurHash: "LGDT6DrW0MT0Pp$Lz:S~1Orq}?g4" 
   }
-]
+];
