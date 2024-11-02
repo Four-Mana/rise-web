@@ -50,14 +50,14 @@ export const PurchaseForm = () => {
       <input type="hidden" name="form-name" value="purchase-form" />
 
       <div className="grid md:grid-cols-2 pb-12 w-full max-w-4xl mx-auto pt-6 px-6 gap-4">
-        <div>
+        <div className='grid gap-4'>
           <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">
             Nombre:
           </label>
           <Input type="text" name="name" placeholder="Carlos Garcia" className={inputClassNames} />
         </div>
 
-        <div>
+        <div className='grid gap-4'>
           <label className="font-semibold tracking-tighter text-white/80" htmlFor="email">
             Correo eléctronico:
           </label>
@@ -70,7 +70,8 @@ export const PurchaseForm = () => {
             <ArticleCheckbox
               key={article.name}
               name={article.name}
-              {...(article.variants && { options: article.variants.split(" ") })}
+              // {...(article.variants && { options: article.variants.split(" ") })}
+              options={article.variants?.split(" ") || ["on"]}
               singleOption={!article.variants}
               price={article.price}
               onChange={(value) => handleCheckboxChange(article.name, value)}
@@ -91,6 +92,6 @@ export const PurchaseForm = () => {
 };
 
 const inputClassNames = classNames(
-  'block w-full rounded-lg bg-zinc-600 py-1.5 px-3 text-sm text-white',
+  'block w-full rounded-lg bg-zinc-600 py-2 px-3 text-sm text-white',
   'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
 );
