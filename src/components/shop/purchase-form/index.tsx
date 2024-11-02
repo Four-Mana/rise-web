@@ -1,8 +1,8 @@
 'use client'
-import { Input } from '@headlessui/react';
+import { Checkbox, Input } from '@headlessui/react';
 import classNames from 'classnames';
 import React, { ChangeEvent, useState } from 'react'
-import { BiCheckCircle } from 'react-icons/bi';
+import { BiCheck, BiCheckCircle } from 'react-icons/bi';
 
 export const PurchaseForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,12 +32,14 @@ export const PurchaseForm = () => {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: new URLSearchParams(formData as any).toString(),
-      });
-      setIsSubmitted(true)
+      }).then(() => {
+        setIsSubmitted(true)
+      })
     } catch (error) {
       console.error('Form submission error:', error);
     }
   };
+
   if (isSubmitted) {
     <SuccessPurchase />
   }
@@ -121,3 +123,14 @@ export const SuccessPurchase = () => {
     </div>
   )
 }
+
+// export const ProductCheckbox = ({ name, checked, onChange }) => {
+//   return (
+//     <Checkbox
+//       name=''
+//       onChange={ }
+//     >
+//       <BiCheck />
+//     </Checkbox>
+//   )
+// }
