@@ -108,6 +108,7 @@ export const PurchaseForm = () => {
             Album T-shirt
           </label>
         </div>
+
         <label className='font-semibold tracking-tighter text-white/80' htmlFor="email">Tu talla: </label>
         <Input type="text" name="size"
           className={classNames(
@@ -116,6 +117,7 @@ export const PurchaseForm = () => {
           )}
           placeholder='XL'
         />
+
         <button
           className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end disabled:bg-primary-100"
           type="submit"
