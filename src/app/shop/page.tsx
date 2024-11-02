@@ -15,11 +15,12 @@ export default function Shop() {
 
   return (
     <main className="flex flex-col items-center justify-between mt-20 bg-zinc-900 gap-6">
-      <Logo variant="orangeHighlight" size="xl" />
-      <h2 className='tracking-tight font-light text-3xl text-white text-center pb-6'>
-        Elige tu merch ideal y rellena tus datos <a href="#purchase-form"><Highlight>abajo</Highlight> <BiDownArrow className=" inline-block" /></a>
-      </h2>
-
+      <div className="px-6">
+        <Logo variant="orangeHighlight" size="xl" />
+        <h2 className='tracking-tight font-light text-3xl text-white text-center pb-6'>
+          Elige tu merch ideal y rellena tus datos <a href="#purchase-form"><Highlight>abajo</Highlight> <BiDownArrow className=" inline-block" /></a>
+        </h2>
+      </div>
       <Articles />
       <div className="bg-black w-full pt-16 pb-10 px-4 " id="purchase-form">
         <h2 className='tracking-tight font-light text-4xl text-white text-center pb-6'>

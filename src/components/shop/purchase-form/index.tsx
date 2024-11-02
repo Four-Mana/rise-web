@@ -41,7 +41,19 @@ export const PurchaseForm = () => {
       </p>
       <input type="hidden" name="form-name" value="purchase-form" />
 
-      <div className="grid md:grid-cols-2 pb-12 w-full max-w-4xl mx-auto pt-6 px-6 gap-4">
+      <div className=" flex flex-col gap-4 pb-12 w-full max-w-xl mx-auto pt-6 px-6">
+        <label className="font-semibold tracking-tighter text-white/80 mb-2 block">Elige tu merch</label>
+        <div className="grid md:grid-cols-2 gap-2 col-span-2">
+          {articlesList.map((article) => (
+            <ArticleCheckbox
+              key={article.name}
+              name={article.name}
+              options={article.variants?.split(" ") || ["on"]}
+              singleOption={!article.variants}
+              price={article.price}
+            />
+          ))}
+        </div>
         <div className='grid gap-4'>
           <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">
             Nombre:
@@ -54,19 +66,6 @@ export const PurchaseForm = () => {
             Correo eléctronico:
           </label>
           <Input type="email" name="email" required placeholder="carlosgarcia@gmail.com" className={inputClassNames} />
-        </div>
-
-        <label className="font-semibold tracking-tighter text-white/80 mb-2 block">Elige tu merch</label>
-        <div className="grid md:grid-cols-2 gap-2 col-span-2">
-          {articlesList.map((article) => (
-            <ArticleCheckbox
-              key={article.name}
-              name={article.name}
-              options={article.variants?.split(" ") || ["on"]}
-              singleOption={!article.variants}
-              price={article.price}
-            />
-          ))}
         </div>
 
         <button
