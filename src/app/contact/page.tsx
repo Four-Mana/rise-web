@@ -2,6 +2,7 @@ import { Logo } from "@/components";
 import { Highlight } from "@/components/highlight";
 import { ContactForm } from "@/components/contact/contact-form";
 import { MusicBar } from "@/components/home";
+import {ClipLoaderComponent } from '@/components';
 
 export const metadata = {
   title: "Contáctanos - Rise",
@@ -11,6 +12,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <main className="flex flex-col items-center justify-center mt-20 bg-zinc-900 gap-y-6">
+      <ClipLoaderComponent>
       <section className="max-w-5xl px-4">
         <div className="bg-zinc-900 w-full py-10 flex flex-col gap-3 ">
           <div className="mx-auto">
@@ -34,6 +36,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      </ClipLoaderComponent>
     </main>
   );
 }

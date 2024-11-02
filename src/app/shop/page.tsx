@@ -3,7 +3,7 @@ import { Logo } from "@/components";
 import { Highlight } from "@/components/highlight";
 import { Album } from "@/components/home";
 import { PurchaseForm } from "@/components/shop/purchase-form";
-
+import {ClipLoaderComponent } from '@/components';
 export const metadata = {
   title: "La Tienda - Rise",
   description: "Compra nuestra mercancía y álbumes"
@@ -13,6 +13,7 @@ export default function Shop() {
 
   return (
     <main className="flex flex-col items-center justify-between mt-20 bg-zinc-900 gap-6">
+      <ClipLoaderComponent>
       <Logo variant="orangeHighlight" size="xl" />
       <Album />
       <div className="bg-black w-full py-10">
@@ -25,6 +26,7 @@ export default function Shop() {
         </p>
         <PurchaseForm />
       </div>
+      </ClipLoaderComponent>
     </main >
   );
 }

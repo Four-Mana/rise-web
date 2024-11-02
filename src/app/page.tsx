@@ -3,10 +3,12 @@ import logo from '@/components/_assets/logoBand.png';
 import background from '../../public/background.jpg'
 import { YoutubeVideo } from '@/components/youtubeVideo';
 import { Album } from '@/components/home';
+import {ClipLoaderComponent } from '@/components';
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
+      <ClipLoaderComponent>
       <HeroSection logo={logo} background={background} />
 
       <section className='w-full py-12 px-8 bg-black'>
@@ -25,6 +27,7 @@ export default function Home() {
       </section>
 
       <Album />
+      </ClipLoaderComponent>
     </main>
   );
 }

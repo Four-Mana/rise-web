@@ -1,4 +1,5 @@
 import { PdfPage } from "@/components/pdfPage";
+import {ClipLoaderComponent } from '@/components';
 
 export const metadata = {
   title: "Privacidad - Rise",
@@ -7,6 +8,8 @@ export const metadata = {
 
 export default function Privacy() {
   return (
+    <ClipLoaderComponent>
     <PdfPage title="Privacidad" file="/assets/privacy.pdf" />
+    </ClipLoaderComponent>
   );
 }

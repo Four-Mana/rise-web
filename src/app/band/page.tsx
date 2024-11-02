@@ -2,7 +2,7 @@ import { Logo } from "@/components";
 import Image from "next/image";
 import heroBand from "@/components/_assets/band/bandHero.jpg"
 import bandHigh from "@/components/_assets/band/bandHigh.jpg"
-
+import {ClipLoaderComponent } from '@/components';
 import { Highlight } from "@/components/highlight";
 import { Album } from "@/components/home";
 
@@ -14,6 +14,7 @@ export const metadata = {
 export default function Band() {
   return (
     <main className="flex flex-col items-center justify-between mt-20 bg-zinc-900">
+      <ClipLoaderComponent>
       <Logo variant="orangeHighlight" size="xl" />
       <div className='grid md:grid-cols-2 max-w-5xl min-h-screen py-10 gap-x-6 gap-y-10 grid-cols-1 px-8'>
         <div className="row-start-2 md:row-start-1  md:col-start-1 w-full bg-zinc-900 h-64 md:h-80 flex items-center relative">
@@ -44,6 +45,7 @@ export default function Band() {
         </div>
       </div >
       <Album bgVariant="black" />
+      </ClipLoaderComponent>
     </main >
   );
 }
