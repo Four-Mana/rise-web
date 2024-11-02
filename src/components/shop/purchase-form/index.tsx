@@ -46,7 +46,7 @@ export const PurchaseForm = () => {
   }
 
   return (
-    <form name="purchase-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit} >
+    <form name="purchase-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit} data-netlify-recaptcha="true" >
       <p className="hidden">
         <label>
           Don’t fill this out if you’re human: <input name="bot-field" />
@@ -108,13 +108,16 @@ export const PurchaseForm = () => {
             Album T-shirt
           </label>
         </div>
-        <button
-          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end disabled:bg-primary-100"
-          type="submit"
-          disabled={!selectedItems.album && !selectedItems['album-tshirt'] && !selectedItems['frank-tshirt']}
-        >
-          Enviar
-        </button>
+        <div className='flex justify-between'>
+          <div data-netlify-recaptcha="true"></div>
+          <button
+            className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end disabled:bg-primary-100"
+            type="submit"
+            disabled={!selectedItems.album && !selectedItems['album-tshirt'] && !selectedItems['frank-tshirt']}
+          >
+            Enviar
+          </button>
+        </div>
       </div>
     </form>
   )
