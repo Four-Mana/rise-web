@@ -2,8 +2,10 @@
 import { Input } from '@headlessui/react';
 import classNames from 'classnames';
 import React, { ChangeEvent, useState } from 'react'
+import { BiCheckCircle } from 'react-icons/bi';
 
 export const PurchaseForm = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedItems, setSelectedItems] = useState({
     'frank-tshirt': false,
     'album': false,
@@ -31,10 +33,14 @@ export const PurchaseForm = () => {
         },
         body: new URLSearchParams(formData as any).toString(),
       });
+      setIsSubmitted(true)
     } catch (error) {
       console.error('Form submission error:', error);
     }
   };
+  if (isSubmitted) {
+    <SuccessPurchase />
+  }
 
   return (
     <form name="purchase-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit} >
@@ -102,5 +108,16 @@ export const PurchaseForm = () => {
         <button className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end" type="submit">Enviar</button>
       </div>
     </form>
+  )
+}
+
+export const SuccessPurchase = () => {
+  return (
+    <div className='flex flex-col items-center'>
+      <BiCheckCircle size={64} className='text-green-400' />
+      <h3 className='tracking-tight font-light text-4xl text-white text-center pb-6'>
+        Tomamos nota. Te contactaremos pronto para tramitar la compra.
+      </h3>
+    </div>
   )
 }
