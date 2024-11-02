@@ -109,14 +109,17 @@ export const PurchaseForm = () => {
           </label>
         </div>
 
-        <label className='font-semibold tracking-tighter text-white/80' htmlFor="email">Tu talla: </label>
-        <Input type="text" name="size"
-          className={classNames(
-            'block w-full rounded-lg bg-zinc-600 py-1.5 px-3 text-sm/6 text-white',
-            'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
-          )}
-          placeholder='XL'
-        />
+        {(!!selectedItems['album-tshirt'] || !!selectedItems['frank-tshirt']) && <>
+          <label className='font-semibold tracking-tighter text-white/80' htmlFor="email">Tu talla: </label>
+          <Input type="text" name="size"
+            className={classNames(
+              'block w-full rounded-lg bg-zinc-600 py-1.5 px-3 text-sm/6 text-white',
+              'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
+            )}
+            placeholder='XL'
+          />
+        </>
+        }
 
         <button
           className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end disabled:bg-primary-100"
