@@ -1,11 +1,8 @@
 'use client'
-import { useState, ChangeEvent } from 'react';
-import { Checkbox, Input, Select } from '@headlessui/react';
-import { BiCheckCircle } from 'react-icons/bi';
-import { CgCheck, CgChevronDown } from 'react-icons/cg';
+import { useState } from 'react';
+import { Input } from '@headlessui/react';
 import classNames from 'classnames';
 import { articlesList } from '../articlesList';
-import { Highlight } from '@/components/highlight';
 import { SuccessPurchase } from './success-purchase';
 import { ArticleCheckbox } from './checkbox-article';
 
