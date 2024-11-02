@@ -49,19 +49,23 @@ export const PurchaseForm = () => {
       </p>
       <input type="hidden" name="form-name" value="purchase-form" />
 
-      <div className="flex flex-col pb-12 w-full max-w-4xl mx-auto pt-6 px-6 gap-4">
-        <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">
-          Nombre:
-        </label>
-        <Input type="text" name="name" placeholder="Carlos Garcia" className={inputClassNames} />
+      <div className="grid md:grid-cols-2 pb-12 w-full max-w-4xl mx-auto pt-6 px-6 gap-4">
+        <div>
+          <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">
+            Nombre:
+          </label>
+          <Input type="text" name="name" placeholder="Carlos Garcia" className={inputClassNames} />
+        </div>
 
-        <label className="font-semibold tracking-tighter text-white/80" htmlFor="email">
-          Correo eléctronico:
-        </label>
-        <Input type="email" name="email" placeholder="carlosgarcia@gmail.com" className={inputClassNames} />
+        <div>
+          <label className="font-semibold tracking-tighter text-white/80" htmlFor="email">
+            Correo eléctronico:
+          </label>
+          <Input type="email" name="email" placeholder="carlosgarcia@gmail.com" className={inputClassNames} />
+        </div>
 
         <label className="font-semibold tracking-tighter text-white/80 mb-2 block">Elige tu merch</label>
-        <div className="grid md:grid-cols-2 gap-2">
+        <div className="grid md:grid-cols-2 gap-2 col-span-2">
           {articlesList.map((article) => (
             <ArticleCheckbox
               key={article.name}
@@ -75,7 +79,7 @@ export const PurchaseForm = () => {
         </div>
 
         <button
-          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end"
+          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 col-start-2 ml-auto"
           type="submit"
           disabled={!Object.values(selectedItems).some((item) => item)}
         >
