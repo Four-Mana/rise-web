@@ -7,7 +7,7 @@ export const Articles = () => {
   return (
     <div className='w-full mx-auto px-4 lg:px-0 py-6 md:py-10'>
       <div className='max-w-4xl mx-auto grid md:grid-cols-3 gap-y-6 justify-center'>
-        {articlesList.map(({ front, back, description,blurDataUrl, ...props }) => (
+        {articlesList.map(({ front, back, description, ...props }) => (
           <Article
             {...props}
             image={
@@ -16,7 +16,6 @@ export const Articles = () => {
                 alt={description}
                 draggable={false}
                 placeholder='blur'
-                blurDataURL={blurDataUrl}
                 style={{
                   objectFit: "cover",
                   width: 264,
