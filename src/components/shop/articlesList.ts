@@ -12,6 +12,7 @@ export type articleListType = {
   description: string;
   price: string;
   variants?: string;
+  formName: string;
 }
 
 export const articlesList: articleListType[] = [
@@ -19,20 +20,23 @@ export const articlesList: articleListType[] = [
     front: FrankFrontImg,
     back: FrankBackImg,
     description: "",
+    formName: "frank-tshirt",
     name: "Frank T-Shirt",
     price: "50.00$",
     variants: "XS S M L XL",
   },
   {
+    name: "Breathing Again T-Shirt",
+    formName: "album-tshirt",
     front: AlbumFrontImg,
     description: "",
-    name: "Breathing Again T-Shirt",
     price: "50.00$",
     variants: "XS S M L XL",
   },
   {
     front: AlbumImg,
     name: "Breathing Again Album",
+    formName: "album",
     description: "",
     price: "50.00$"
   }

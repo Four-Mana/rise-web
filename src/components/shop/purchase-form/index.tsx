@@ -1,26 +1,13 @@
 'use client'
-import { Highlight } from '@/components/highlight';
+import { useState } from 'react';
 import { Input } from '@headlessui/react';
 import classNames from 'classnames';
-import React, { ChangeEvent, useState } from 'react'
-import { BiCheckCircle } from 'react-icons/bi';
+import { articlesList } from '../articlesList';
+import { SuccessPurchase } from './success-purchase';
+import { ArticleCheckbox } from './checkbox-article';
 
 export const PurchaseForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [selectedItems, setSelectedItems] = useState({
-    'frank-tshirt': false,
-    'album': false,
-    'album-tshirt': false,
-  });
-
-  const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = event.target;
-    setSelectedItems((prevItems) => ({
-      ...prevItems,
-      [name]: checked,
-    }));
-  };
-
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,15 +21,15 @@ export const PurchaseForm = () => {
         },
         body: new URLSearchParams(formData as any).toString(),
       }).then(() => {
-        setIsSubmitted(true)
-      })
+        setIsSubmitted(true);
+      });
     } catch (error) {
       console.error('Form submission error:', error);
     }
   };
 
   if (isSubmitted) {
-    return <SuccessPurchase />
+    return <SuccessPurchase />;
   }
 
   return (
@@ -52,94 +39,48 @@ export const PurchaseForm = () => {
           Don’t fill this out if you’re human: <input name="bot-field" />
         </label>
       </p>
-      <input type="hidden" name="purchase-form" value="purchase" />
-      <div className="flex flex-col pb-12w-full max-w-lg mx-auto pt-6 px-6 gap-4">
-        <input type="hidden" name="form-name" value="purchase-form" />
-        <label className='font-semibold tracking-tighter text-white/80' htmlFor="name">Nombre: </label>
+      <input type="hidden" name="form-name" value="purchase-form" />
 
-        <Input
-          type="text" name="name"
-          className={classNames(
-            'block w-full rounded-lg bg-zinc-600 py-1.5 px-3 text-sm/6 text-white',
-            'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
-          )}
-          placeholder='Carlos Garcia'
-        />
-
-        <label className='font-semibold tracking-tighter text-white/80' htmlFor="email">Correo eléctronico: </label>
-        <Input type="email" name="email"
-          className={classNames(
-            'block w-full rounded-lg bg-zinc-600 py-1.5 px-3 text-sm/6 text-white',
-            'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
-          )}
-          placeholder='carlosgarcia@gmail.com'
-        />
-
+      <div className=" flex flex-col gap-4 pb-12 w-full max-w-xl mx-auto pt-6 px-6">
         <label className="font-semibold tracking-tighter text-white/80 mb-2 block">Elige tu merch</label>
-        <div className="flex flex-col gap-2">
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              name="frank-tshirt"
-              checked={selectedItems['frank-tshirt']}
-              onChange={handleCheckboxChange}
-              className="mr-2"
+        <div className="grid md:grid-cols-2 gap-2 col-span-2">
+          {articlesList.map((article) => (
+            <ArticleCheckbox
+              key={article.name}
+              name={article.name}
+              formName={article.formName}
+              options={article.variants?.split(" ") || ["on"]}
+              singleOption={!article.variants}
+              price={article.price}
             />
-            Frank T-shirt
+          ))}
+        </div>
+        <div className='grid gap-4'>
+          <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">
+            Nombre:
           </label>
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              name="album"
-              checked={selectedItems['album']}
-              onChange={handleCheckboxChange}
-              className="mr-2"
-            />
-            Album
-          </label>
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              name="album-tshirt"
-              checked={selectedItems['album-tshirt']}
-              onChange={handleCheckboxChange}
-              className="mr-2"
-            />
-            Album T-shirt
-          </label>
+          <Input type="text" name="name" required placeholder="Carlos Garcia" className={inputClassNames} />
         </div>
 
-        {(!!selectedItems['album-tshirt'] || !!selectedItems['frank-tshirt']) && <>
-          <label className='font-semibold tracking-tighter text-white/80' htmlFor="email">Tu talla: </label>
-          <Input type="text" name="size"
-            className={classNames(
-              'block w-full rounded-lg bg-zinc-600 py-1.5 px-3 text-sm/6 text-white',
-              'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
-            )}
-            placeholder='XL'
-          />
-        </>
-        }
+        <div className='grid gap-4'>
+          <label className="font-semibold tracking-tighter text-white/80" htmlFor="email">
+            Correo eléctronico:
+          </label>
+          <Input type="email" name="email" required placeholder="carlosgarcia@gmail.com" className={inputClassNames} />
+        </div>
 
         <button
-          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 self-end disabled:bg-primary-100"
+          className="bg-primary-400 rounded-md w-fit px-10 font-black text-white py-2 col-start-2 ml-auto "
           type="submit"
-          disabled={!selectedItems.album && !selectedItems['album-tshirt'] && !selectedItems['frank-tshirt']}
         >
           Enviar
         </button>
       </div>
     </form>
-  )
-}
+  );
+};
 
-export const SuccessPurchase = () => {
-  return (
-    <div className='flex flex-col items-center py-20'>
-      <BiCheckCircle size={64} className='text-green-400' />
-      <h3 className='tracking-tight font-light text-4xl text-white text-center pb-6 w-2/3'>
-        Tomamos nota.<br /> Te contactaremos <Highlight>pronto</Highlight> para tramitar la compra.
-      </h3>
-    </div>
-  )
-}
+const inputClassNames = classNames(
+  'block w-full rounded-lg bg-zinc-600 py-2 px-3 text-sm text-white',
+  'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
+);

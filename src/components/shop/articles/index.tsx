@@ -30,6 +30,7 @@ export const Articles = () => {
                   src={back}
                   alt={description}
                   draggable={false}
+                  placeholder="blur"
                   style={{
                     objectFit: "cover",
                     width: 264,
