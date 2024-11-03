@@ -4,11 +4,13 @@ import { StaticImageData } from 'next/image';
 type HeroSectionProps = {
   logo: StaticImageData;
   background: StaticImageData;
+  backgroundblur: string
 };
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   logo,
   background,
+  backgroundblur,
 }) => {
   return (
     <section className="relative h-screen" data-testid="hero-section">
@@ -18,6 +20,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           alt="The band"
           draggable={false}
           className="h-full w-screen object-cover "
+          priority= {true}
+          placeholder='blur'
+          blurDataURL={backgroundblur}
         />
 
         <Image
