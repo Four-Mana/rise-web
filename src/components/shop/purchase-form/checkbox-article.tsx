@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import React, { ChangeEvent, useState } from 'react'
 import { CgCheck, CgChevronDown } from 'react-icons/cg';
 
-export type ArticleCheckboxProps = { name: string, options: string[], price: string, singleOption?: boolean };
-export const ArticleCheckbox = ({ name, options, price, singleOption }: ArticleCheckboxProps) => {
+export type ArticleCheckboxProps = { formName: string, name: string, options: string[], price: string, singleOption?: boolean };
+export const ArticleCheckbox = ({ formName, name, options, price, singleOption }: ArticleCheckboxProps) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [checked, setChecked] = useState(false);
 
@@ -15,7 +15,7 @@ export const ArticleCheckbox = ({ name, options, price, singleOption }: ArticleC
 
   return (
     <div className="w-full p-3 bg-white/20 ring-1 hover:ring-white/30 ring-transparent group rounded-md flex flex-col gap-4">
-      <input name={name} value={checked ? selectedOption : "-"} className='hidden' />
+      <input name={formName} value={checked ? selectedOption : "-"} className='hidden' />
       <div className="flex gap-4">
         <Checkbox
           checked={checked}

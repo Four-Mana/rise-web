@@ -48,6 +48,7 @@ export const PurchaseForm = () => {
             <ArticleCheckbox
               key={article.name}
               name={article.name}
+              formName={article.formName}
               options={article.variants?.split(" ") || ["on"]}
               singleOption={!article.variants}
               price={article.price}
