@@ -26,6 +26,8 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
           <Image
             src={breathingAgain}
             alt="Breathing again album"
+            placeholder='blur'
+           
           />
         </div>
         <div className='flex flex-col gap-3 '>

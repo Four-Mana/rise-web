@@ -23,6 +23,8 @@ export default function Band() {
             fill
             objectFit="contain"
             objectPosition="100% 0%"
+            placeholder="blur"
+           
           />
         </div>
 
@@ -38,6 +40,8 @@ export default function Band() {
             src={bandHigh}
             alt="Image from Rise band"
             layout="fill"
+            placeholder="blur"
+            
             style={{
               objectFit: "cover",
               objectPosition: "100% 30%"

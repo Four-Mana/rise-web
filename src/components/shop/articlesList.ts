@@ -4,6 +4,7 @@ import AlbumFrontImg from './assets/tshirt-album-front.png'
 import AlbumImg from './assets/breathingAgain.png'
 import { StaticImageData } from 'next/image';
 
+
 export type articleListType = {
   front: StaticImageData;
   back?: StaticImageData;
@@ -20,14 +21,14 @@ export const articlesList: articleListType[] = [
     description: "",
     name: "Frank T-Shirt",
     price: "50.00$",
-    variants: "XS S M L XL"
+    variants: "XS S M L XL",
   },
   {
     front: AlbumFrontImg,
     description: "",
     name: "Breathing Again T-Shirt",
     price: "50.00$",
-    variants: "XS S M L XL"
+    variants: "XS S M L XL",
   },
   {
     front: AlbumImg,
