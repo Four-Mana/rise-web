@@ -15,12 +15,11 @@ export const ArticleCheckbox = ({ name, options, price, singleOption }: ArticleC
 
   return (
     <div className="w-full p-3 bg-white/20 ring-1 hover:ring-white/30 ring-transparent group rounded-md flex flex-col gap-4">
+      <input name={name} value={checked ? selectedOption : "-"} className='hidden' />
       <div className="flex gap-4">
         <Checkbox
-          name={name}
           checked={checked}
           onChange={() => setChecked(!checked)}
-          value={checked ? selectedOption : "-"}
           className="block size-6 rounded-md bg-white/10 p-1 ring-1 ring-white/15 ring-inset data-[checked]:bg-white/60 group group-hover:ring-white/30"
         >
           <CgCheck className="hidden size-4 text-black font-black group-data-[checked]:block" />
