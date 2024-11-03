@@ -41,8 +41,8 @@ body {
   display: none;
 }
 .divider-bottom-home {
-  position: absolute;
-  bottom: 0;
+  position: absolute; 
+  bottom: 0; 
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -50,12 +50,12 @@ body {
 }
 
 .divider-bottom-home svg {
-  position: relative;
   display: block;
   width: calc(132% + 1.3px);
-  height: 69px;
+  height: 69px; 
 }
 
-.divider-bottom-home  .shape-fill {
-  fill: #000000;
+.divider-bottom-home .shape-fill {
+  fill: #000000; 
 }
+
