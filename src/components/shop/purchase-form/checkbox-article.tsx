@@ -15,7 +15,7 @@ export const ArticleCheckbox = ({ formName, name, options, price, singleOption }
 
   return (
     <div className="w-full p-3 bg-white/20 ring-1 hover:ring-white/30 ring-transparent group rounded-md flex flex-col gap-4">
-      <input name={formName} value={checked ? selectedOption : "-"} className='hidden' />
+      <input name={formName} value={checked ? selectedOption : "not required"} className='hidden' readOnly />
       <div className="flex gap-4">
         <Checkbox
           checked={checked}
