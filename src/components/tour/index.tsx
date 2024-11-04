@@ -32,8 +32,8 @@ export const TourForm = () => {
 
 
   return (
-    <form name="contact-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
-      <input type="hidden" name="form-name" value="contact-form" />
+    <form name="tour-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
+      <input type="hidden" name="form-name" value="tour-form" />
       <div className="flex flex-col pb-12 gap-4 w-full max-w-xl mx-auto pt-6">
         <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">Nombre: </label>
         <Input

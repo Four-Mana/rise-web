@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           alt="The band"
           draggable={false}
           className="h-full w-screen object-cover"
-          priority={true}
+          priority
           placeholder="blur"
         />
 
