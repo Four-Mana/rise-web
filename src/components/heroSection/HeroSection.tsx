@@ -6,10 +6,10 @@ type HeroSectionProps = {
   background: StaticImageData | string;
 };
 
-export const HeroSection = ({
+export const HeroSection: React.FC<HeroSectionProps> = ({
   logo,
   background,
-}: HeroSectionProps) => {
+}) => {
   return (
     <section className="relative h-screen" data-testid="hero-section">
       <div className="flex h-full w-full justify-center">
@@ -19,6 +19,7 @@ export const HeroSection = ({
           draggable={false}
           className="h-full w-screen object-cover"
           priority
+          placeholder="blur"
           fill
         />
 
