@@ -39,6 +39,12 @@ export const DesktopNavbar = () => {
             Tienda
           </Link>
           <Link
+            href="/tour"
+            className="text-sm font-semibold leading-tight tracking-tighter text-white hover:text-yellow-500"
+          >
+            Tour
+          </Link>
+          <Link
             href="/contact"
             className="text-sm font-semibold leading-tight tracking-tighter text-white hover:text-yellow-500"
           >

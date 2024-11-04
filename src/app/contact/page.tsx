@@ -16,7 +16,7 @@ export default function Contact() {
           <div className="mx-auto">
             <Logo variant="orangeHighlight" size="xl" />
           </div>
-          <h1 className='tracking-tight font-light text-4xl text-white text-center'>Contacto</h1>
+          <h1 className='tracking-tight font-light text-4xl text-center text-white'>Contacto</h1>
           <p className="text-center mx-auto text-white/80 md:w-2/3">
             No te leeremos el Tarot o adivinaremos tu futuro,
             pero si tienes cualquier pregunta y/o comentario no dudes en ponerte en contacto con nosotros.

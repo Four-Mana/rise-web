@@ -21,10 +21,11 @@ export default function Band() {
             src={heroBand}
             alt="Image from Rise band"
             fill
-            objectFit="contain"
-            objectPosition="100% 0%"
             placeholder="blur"
-           
+            style={{
+              objectFit: "contain",
+              objectPosition: "100% 0%"
+            }}
           />
         </div>
 
@@ -41,7 +42,7 @@ export default function Band() {
             alt="Image from Rise band"
             layout="fill"
             placeholder="blur"
-            
+
             style={{
               objectFit: "cover",
               objectPosition: "100% 30%"

@@ -24,6 +24,14 @@ export default function RootLayout({
         <meta property="og:url" content="https://risemetalband.com" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Rise Official Website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="https://risemetalband.com" />
+        <meta property="twitter:url" content="https://risemetalband.com" />
+        <meta name="twitter:title" content="Rise band - official website" />
+        <meta name="twitter:description" content="Web oficial de la banda Rise. Obtén información sobre nuestros próximos álbumes y eventos o cómprate algo de la banda." />
+        <meta name="twitter:image" content="/og-image.jpg" />
+
       </head>
       <body className={inter.className}>
         <Navbar />
