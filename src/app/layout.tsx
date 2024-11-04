@@ -6,7 +6,7 @@ import { Footer, Navbar } from '@/components';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Rise metal',
+  title: 'Rise band - official website',
   description: 'Web oficial de la banda Rise. Obtén información sobre nuestros próximos álbumes y eventos o cómprate algo de la banda.',
 };
 
@@ -17,6 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="Rise band - official website" />
+        <meta property="og:description" content="Web oficial de la banda Rise. Obtén información sobre nuestros próximos álbumes y eventos o cómprate algo de la banda." />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://risemetalband.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Rise Official Website" />
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}

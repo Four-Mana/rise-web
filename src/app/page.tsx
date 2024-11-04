@@ -4,12 +4,14 @@ import background from '../../public/background.jpg'
 import { YoutubeVideo } from '@/components/youtubeVideo';
 import { Album } from '@/components/home';
 
- 
+
+
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <HeroSection logo={logo} background={background} />
-      
+
       <section className='w-full py-12 px-8 bg-black'>
         <div className='grid gap-12 max-w-screen-lg mx-auto'>
           <p className='max-w-screen-md mx-auto font-light tracking-tighter text-xl text-white text-center'>
@@ -18,7 +20,7 @@ export default function Home() {
           </p>
           <YoutubeVideo id="KAonpOplglo" title='test' />
         </div>
-        
+
       </section>
 
       <Album />
