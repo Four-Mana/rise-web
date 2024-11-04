@@ -3,7 +3,7 @@ import { StaticImageData } from 'next/image';
 
 type HeroSectionProps = {
   logo: StaticImageData;
-  background: StaticImageData;
+  background: StaticImageData | string;
 };
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -19,7 +19,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           draggable={false}
           className="h-full w-screen object-cover"
           priority
-          placeholder="blur"
+          fill
         />
 
         <Image

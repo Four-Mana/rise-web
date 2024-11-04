@@ -10,7 +10,7 @@ import { Album } from '@/components/home';
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
-      <HeroSection logo={logo} background={background} />
+      <HeroSection logo={logo} background="https://risemetalband.com/hero-picture.jpg?w=800&h=600&fit=crop&q=80" />
 
       <section className='w-full py-12 px-8 bg-black'>
         <div className='grid gap-12 max-w-screen-lg mx-auto'>
