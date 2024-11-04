@@ -6,10 +6,10 @@ type HeroSectionProps = {
   background: StaticImageData | string;
 };
 
-export const HeroSection: React.FC<HeroSectionProps> = ({
+export const HeroSection = ({
   logo,
   background,
-}) => {
+}: HeroSectionProps) => {
   return (
     <section className="relative h-screen" data-testid="hero-section">
       <div className="flex h-full w-full justify-center">
