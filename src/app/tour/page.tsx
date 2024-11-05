@@ -1,11 +1,11 @@
 import { Logo } from "@/components";
 import { Highlight } from "@/components/highlight";
-import { ContactForm } from "@/components/contact/contact-form";
 import { MusicBar } from "@/components/home";
+import { TourForm } from "@/components/tour";
 
 export const metadata = {
-  title: "Contáctanos - Rise",
-  description: "Queremos escuchar tus sugerencias",
+  title: "Tour - Rise",
+  description: "Invoca a RISE donde se necesite",
 };
 
 export default function Contact() {
@@ -16,13 +16,13 @@ export default function Contact() {
           <div className="mx-auto">
             <Logo variant="orangeHighlight" size="xl" />
           </div>
-          <h1 className='tracking-tight font-light text-4xl text-center text-white'>Contacto</h1>
+          <h1 className='tracking-tight font-light text-4xl text-center text-white'>Tour</h1>
           <p className="text-center mx-auto text-white/80 md:w-2/3">
-            No te leeremos el Tarot o adivinaremos tu futuro,
-            pero si tienes cualquier pregunta y/o comentario no dudes en ponerte en contacto con nosotros.
-            Tardaremos menos en responderte que la <Highlight>Seguridad Social</Highlight>
+            ¿Quieres molestar a tus vecinos? ¿El alcalde/alcaldesa tu pueblo no gasta en <Highlight>cultura</Highlight>? ¿Quieres poner
+            música a tu <Highlight>divorcio</Highlight>? ¿A tu ex le molaba Amon Amarth y quieres joderle/la? ¡No te preocupes! Ponte en
+            contacto con nosotros para que carguemos todo en la furgo, echemos gasolina, y vayamos a reventar <Highlight>tímpanos</Highlight>
           </p>
-          <ContactForm />
+          <TourForm />
           <div className="w-full flex justify-center">
             <MusicBar
               header={

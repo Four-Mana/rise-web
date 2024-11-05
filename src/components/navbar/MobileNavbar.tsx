@@ -30,7 +30,7 @@ export const MobileNavbar = () => {
           <MenuItems
             transition
             anchor="bottom end"
-            className="z-50 flex origin-top-left flex-col gap-2 rounded-md bg-white px-6 py-3 text-black transition duration-100 ease-out"
+            className="z-50 flex origin-top-left flex-col gap-2 rounded-md bg-[#5e5e60] px-6 py-3 text-white font-light transition duration-100 ease-out"
           >
             <MenuItem>
               <Link href="/">Menú</Link>
@@ -40,6 +40,9 @@ export const MobileNavbar = () => {
             </MenuItem>
             <MenuItem>
               <Link href="/shop">Tienda</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/tour">Tour</Link>
             </MenuItem>
             <MenuItem>
               <Link href="/contact">Contacto</Link>

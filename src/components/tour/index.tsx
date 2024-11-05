@@ -2,18 +2,17 @@
 import { Input } from '@headlessui/react';
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import { SuccesContact } from './success-contact';
+import { SuccessTour } from './success-tour';
 
-export const ContactForm = () => {
+export const TourForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
     try {
-      await fetch('/__contact-form.html', {
+      await fetch('/__tour-form.html', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -28,13 +27,13 @@ export const ContactForm = () => {
   };
 
   if (isSubmitted) {
-    return <SuccesContact />;
+    return <SuccessTour />;
   }
 
 
   return (
-    <form name="contact-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
-      <input type="hidden" name="form-name" value="contact-form" />
+    <form name="tour-form" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
+      <input type="hidden" name="form-name" value="tour-form" />
       <div className="flex flex-col pb-12 gap-4 w-full max-w-xl mx-auto pt-6">
         <label className="font-semibold tracking-tighter text-white/80" htmlFor="name">Nombre: </label>
         <Input
