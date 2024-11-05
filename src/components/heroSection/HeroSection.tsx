@@ -3,7 +3,7 @@ import { StaticImageData } from 'next/image';
 
 type HeroSectionProps = {
   logo: StaticImageData;
-  background: StaticImageData | string;
+  background: StaticImageData;
 };
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -20,7 +20,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           className="h-full w-screen object-cover"
           priority
           placeholder="blur"
-          fill
         />
 
         <Image
