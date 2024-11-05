@@ -2,8 +2,8 @@ import FrankFrontImg from './assets/tshirt-frank-front.png'
 import FrankBackImg from './assets/tshirt-frank-back.png'
 import AlbumFrontImg from './assets/tshirt-album-front.png'
 import AlbumImg from './assets/breathingAgain.png'
-import DerangeFrontImg from './assets/derange_front.jpg'
-import DerangeBackImg from './assets/derange_back.jpg'
+import DerangeFrontImg from './assets/derange_front.png'
+import DerangeBackImg from './assets/derange_back.png'
 import { StaticImageData } from 'next/image';
 
 
@@ -43,10 +43,10 @@ export const articlesList: articleListType[] = [
     variants: "5-6Y S M L XL",
   },
   {
-    front: DerangeFrontImg,
-    back: DerangeBackImg,
     name: "Derange Album",
     formName: "derange-album",
+    front: DerangeFrontImg,
+    back: DerangeBackImg,
     description: "",
     price: "5.00€"
   },
