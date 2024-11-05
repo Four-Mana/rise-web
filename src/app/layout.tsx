@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <meta property="og:title" content="Rise band - official website" />
         <meta property="og:description" content="Web oficial de la banda Rise. Obtén información sobre nuestros próximos álbumes y eventos o cómprate algo de la banda." />
-        <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/7f78487d-d7fa-42f8-a0ae-be45f40bcd98.png?token=bnS6OGDTlP6g8rZ8YdDdQL_MeFPuAVltpOAOvm97bhU&height=1200&width=1200&expires=33266831321" />
+        <meta property="og:image" content="/og-image.png" />
         <meta property="og:url" content="https://risemetalband.com" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Rise Official Website" />
@@ -30,7 +30,7 @@ export default function RootLayout({
         <meta property="twitter:url" content="https://risemetalband.com" />
         <meta name="twitter:title" content="Rise band - official website" />
         <meta name="twitter:description" content="Web oficial de la banda Rise. Obtén información sobre nuestros próximos álbumes y eventos o cómprate algo de la banda." />
-        <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/7f78487d-d7fa-42f8-a0ae-be45f40bcd98.png?token=bnS6OGDTlP6g8rZ8YdDdQL_MeFPuAVltpOAOvm97bhU&height=1200&width=1200&expires=33266831321" />
+        <meta name="twitter:image" content="/og-image.png" />
 
       </head>
       <body className={inter.className}>
