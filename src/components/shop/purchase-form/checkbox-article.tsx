@@ -10,11 +10,21 @@ export const ArticleCheckbox = ({ formName, name, options, price, singleOption }
 
   const handleOptionChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
+    if (checked === false) {
+      setChecked(true)
+    }
     setSelectedOption(value);
   };
 
+  const handleClick = () => {
+    if (checked) {
+      return;
+    }
+    setChecked(true)
+  }
+
   return (
-    <div className="w-full p-3 bg-white/20 ring-1 hover:ring-white/30 ring-transparent group rounded-md flex flex-col gap-4">
+    <div className="w-full p-3 bg-white/20 ring-1 hover:ring-white/30 ring-transparent group rounded-md flex flex-col gap-4" onClick={handleClick}>
       <input name={formName} value={checked ? selectedOption : "not required"} className='hidden' readOnly />
       <div className="flex gap-4">
         <Checkbox
@@ -29,7 +39,7 @@ export const ArticleCheckbox = ({ formName, name, options, price, singleOption }
       <div className="w-full flex justify-between items-center">
         <div>{price}</div>
         <div className={classNames("relative w-2/5 self-end", { "hidden": singleOption })}>
-          <Select value={selectedOption} onChange={handleOptionChange} className={selectClassNames} disabled={!checked}>
+          <Select value={selectedOption} onChange={handleOptionChange} className={selectClassNames}>
             {options.map((option) => (
               <option key={option} value={option}>
                 {option}
