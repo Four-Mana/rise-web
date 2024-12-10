@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Input } from '@headlessui/react';
 import classNames from 'classnames';
-import { articlesList } from '../articlesList';
+import { articleCheckboxList, articlesList } from '../articlesList';
 import { SuccessPurchase } from './success-purchase';
 import { ArticleCheckbox } from './checkbox-article';
 
@@ -44,12 +44,12 @@ export const PurchaseForm = () => {
       <div className=" flex flex-col gap-4 pb-12 w-full max-w-xl mx-auto pt-6 px-6">
         <label className="font-semibold tracking-tighter text-white/80 mb-2 block">Elige tu merch</label>
         <div className="grid md:grid-cols-2 gap-2 col-span-2">
-          {articlesList.map((article) => (
+          {articleCheckboxList.map((article) => (
             <ArticleCheckbox
               key={article.name}
               name={article.name}
               formName={article.formName}
-              options={article.variants?.split(" ") || ["on"]}
+              options={article.variants?.split("|") || ["on"]}
               singleOption={!article.variants}
               price={article.price}
             />

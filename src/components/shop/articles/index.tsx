@@ -17,9 +17,10 @@ export const Articles = () => {
                 draggable={false}
                 placeholder='blur'
                 style={{
-                  objectFit: "cover",
+                  objectFit: "contain",
                   width: 264,
-                  height: 264
+                  height: 264,
+                  background: "black"
                 }}
               />
             }
@@ -32,9 +33,10 @@ export const Articles = () => {
                   draggable={false}
                   placeholder="blur"
                   style={{
-                    objectFit: "cover",
+                    objectFit: "contain",
                     width: 264,
-                    height: 264
+                    height: 264,
+                    background: "black"
                   }}
                 />
               ),
