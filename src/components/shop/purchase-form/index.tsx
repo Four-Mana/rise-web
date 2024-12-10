@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Input } from '@headlessui/react';
 import classNames from 'classnames';
-import { articleCheckboxList, articlesList } from '../articlesList';
+import { articleCheckboxList } from '../articlesList';
 import { SuccessPurchase } from './success-purchase';
 import { ArticleCheckbox } from './checkbox-article';
 
