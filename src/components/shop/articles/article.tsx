@@ -31,7 +31,7 @@ export const Article = ({ image, back, name, price, variants }: ArticleProp) => 
           <div className='flex flex-col gap-2 pt-2 '>
             <span className='text-white text-xl tracking-wider font-black'>{name}</span>
             <div className='flex flex-row justify-between font-light'>
-              <span className='text-white tracking-wider '>{variants ? variants.replace("|", " ") : ""}</span>
+              <span className='text-white tracking-wider '>{variants ? variants.replaceAll("|", " ") : ""}</span>
               <span className='text-white tracking-wider font-black'>{price}</span>
             </div>
           </div>
