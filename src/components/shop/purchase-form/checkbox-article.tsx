@@ -1,4 +1,4 @@
-import { Checkbox, Select } from '@headlessui/react';
+import { Checkbox, Listbox, ListboxButton, ListboxOption, Select } from '@headlessui/react';
 import classNames from 'classnames';
 import React, { ChangeEvent, useState } from 'react'
 import { CgCheck, CgChevronDown } from 'react-icons/cg';
@@ -41,7 +41,7 @@ export const ArticleCheckbox = ({ formName, name, options, price, singleOption }
         <div className={classNames("relative w-2/5 self-end", { "hidden": singleOption })}>
           <Select value={selectedOption} onChange={handleOptionChange} className={selectClassNames}>
             {options.map((option) => (
-              <option key={option} value={option}>
+              <option key={option} value={option} className='text-black bg-white'>
                 {option}
               </option>
             ))}
@@ -55,7 +55,7 @@ export const ArticleCheckbox = ({ formName, name, options, price, singleOption }
 
 
 const selectClassNames = classNames(
-  'block w-full appearance-none rounded-lg bg-white/20 py-1.5 px-3 text-sm text-white',
+  'block w-full appearance-none rounded-lg bg-white/20 py-1.5 px-3 text-sm',
   'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25',
-  'disabled:bg-white/10 enabled:cursor-pointer'
+  'disabled:bg-white/10 enabled:cursor-pointer',
 );
