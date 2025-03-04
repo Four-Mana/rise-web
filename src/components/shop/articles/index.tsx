@@ -20,7 +20,6 @@ export const Articles = () => {
                   objectFit: "contain",
                   width: 264,
                   height: 264,
-                  background: "black"
                 }}
               />
             }
@@ -36,7 +35,6 @@ export const Articles = () => {
                     objectFit: "contain",
                     width: 264,
                     height: 264,
-                    background: "black"
                   }}
                 />
               ),

@@ -27,12 +27,12 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
             src={breathingAgain}
             alt="Breathing again album"
             placeholder='blur'
-           
+
           />
         </div>
         <div className='flex flex-col gap-3 '>
           <h2 className='font-semibold tracking-tighter text-white/80'>
-            Nuevo álbum - <span className='text-secondary tracking-wider font-black'>Ya disponible</span>
+            Nuevo álbum - <span className='text-primary-400 tracking-wider font-black'>Ya disponible</span>
           </h2>
           <h1 className='tracking-tight font-light text-4xl text-white'>Breathing again</h1>
           <p className='text-sm font-light tracking-wide leading-6'>

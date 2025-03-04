@@ -20,7 +20,7 @@ export const Article = ({ image, back, name, price, variants }: ArticleProp) => 
     <a href="#purchase-form">
       <div className='w-full flex'>
         <div className='flex flex-col'>
-          <div className=" bg-zinc-900 flex items-center justify-center overflow-hidden relative group">
+          <div className=" flex items-center justify-center overflow-hidden relative group">
             <div className={imageStyle}>{image}</div>
             {back && (
               <div className="max-w-64 max-h-64 hidden group-hover:flex">
