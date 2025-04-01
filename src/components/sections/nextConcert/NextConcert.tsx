@@ -3,7 +3,7 @@ import cartel from './assets/event-cartel.png'
 import Image from 'next/image';
 import { Highlight } from '@/components/highlight';
 
-export type variant = 'black' | 'transparent';
+type variant = 'black' | 'transparent';
 export type NextConcertProps = {
   bgVariant?: variant;
   withoutBar?: boolean;
