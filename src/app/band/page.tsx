@@ -15,7 +15,7 @@ export default function Band() {
   return (
     <main className="flex flex-col items-center justify-between mt-20 bg-zinc-900">
       <Logo variant="orangeHighlight" size="xl" />
-      <div className='grid md:grid-cols-2 max-w-5xl min-h-screen py-10 gap-x-6 gap-y-10 grid-cols-1 px-8'>
+      <div className='grid md:grid-cols-2 max-w-5xl py-10 gap-x-6 gap-y-10 grid-cols-1 px-8'>
         <div className="row-start-2 md:row-start-1  md:col-start-1 w-full bg-zinc-900 h-64 md:h-80 flex items-center relative">
           <Image
             src={heroBand}
@@ -34,7 +34,7 @@ export default function Band() {
         </p>
 
         <p className="row-start-3 md:row-start-2 md:col-start-1 font-light text-wide text-white leading-7">
-          Tras varios conciertos, cambios en la formación original, y tras la pandemia global, RISE no se vino abajo y se reformuló internamente tanto en sus componentes como en su sonido. Todo ello hace que a principios de 2024 se embarcaran en la grabación de su segundo trabajo, <Highlight className="font-semibold">‘Breathing Again’</Highlight>, el cuál vió la luz en diciembre de 2024. Dicho álbum fue grabado, mezclado y masterizado en los estudios Hangar XIX junto a los productores <Highlight className="font-semibold">Héctor Martín y Dani Gastelurrutia</Highlight>.
+          Tras varios conciertos, cambios en la formación original, y tras la pandemia global, RISE no se vino abajo y se reformuló internamente tanto en sus componentes como en su sonido. Todo ello hace que en diciembre de 2024 lanzaran de su segundo trabajo, ‘Breathing Again’, ya disponible en todas las plataformas digitales. Dicho álbum fue grabado, mezclado y masterizado en los estudios Hangar XIX junto a los productores Héctor Martín y Dani Gastelurrutia.
         </p>
         <div className="w-full bg-zinc-900 h-96 flex items-center row-start-4 md:row-start-2 md:col-start-2 pb-36 overflow-hidden relative">
           <Image

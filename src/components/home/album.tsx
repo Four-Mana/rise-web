@@ -5,7 +5,6 @@ import { SiSpotify } from 'react-icons/si';
 import breathingAgain from './assets/breathingAgain.png';
 import Image from 'next/image';
 import classNames from 'classnames';
-import { Highlight } from "@/components/highlight";
 
 export type variant = 'black' | 'transparent';
 export type AlbumProps = {
@@ -37,13 +36,9 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
           <h1 className='tracking-tight font-light text-4xl text-white'>Breathing again</h1>
           <p className='text-sm font-light tracking-wide leading-6'>
             Una declaración de intenciones. Un sonido renovado. <span className='font-semibold text-primary-400'>RISE</span> está de vuelta.
-            Más rabiosos, más furiosos y desafiantes que <span className='font-semibold text-primary-400'>NUNCA</span>
+            Más rabiosos, más furiosos y desafiantes que <span className='font-semibold text-primary-400'>NUNCA</span>.
           </p>
-          {!withoutBar && (
-            <MusicBar
-              header={<>¿Preparados para la nueva <Highlight>era</Highlight>?</>}
-            />
-          )}
+          {!withoutBar && <MusicBar />}
         </div>
       </div>
     </section>
@@ -51,16 +46,9 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
 };
 
 
-type MusicBarProps = {
-  header?: ReactNode;
-};
-
-export const MusicBar = ({ header }: MusicBarProps) => {
+export const MusicBar = () => {
   return (
     <div className='mt-12 grid md:gap-6 gap-2'>
-      <h1 className='tracking-wide font-light text-2xl text-center text-white'>
-        {header}
-      </h1>
       <div className='flex flex-wrap gap-6 w-full py-4 bg-white/30 justify-center items-center rounded-full'>
         <Link href="https://risemetalband.bandcamp.com/music" className="text-white hover:text-yellow-500 transition-colors">
           <FaBandcamp size={24} />
