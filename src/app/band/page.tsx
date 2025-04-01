@@ -4,7 +4,8 @@ import heroBand from "@/components/_assets/band/bandHero.jpg"
 import bandHigh from "@/components/_assets/band/bandHigh.jpg"
 
 import { Highlight } from "@/components/highlight";
-import { Album } from "@/components/home";
+import { Album } from "@/components/sections";
+
 
 export const metadata = {
   title: "La Banda - Rise",

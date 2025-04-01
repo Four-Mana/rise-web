@@ -2,7 +2,7 @@ import { HeroSection } from '@/components/heroSection';
 import logo from '@/components/_assets/logoBand.png';
 import background from '../../public/background.jpg'
 import { YoutubeVideo } from '@/components/youtubeVideo';
-import { Album } from '@/components/home';
+import { Album, NextConcert } from '@/components/sections';
 
 
 export default function Home() {
@@ -22,6 +22,8 @@ export default function Home() {
       </section>
 
       <Album />
+
+      <NextConcert bgVariant='black' />
     </main>
   );
 }

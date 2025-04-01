@@ -1,7 +1,7 @@
 import { Logo } from "@/components";
 
 import { Highlight } from "@/components/highlight";
-import { Album } from "@/components/home";
+import { Album } from "@/components/sections";
 import { Articles } from "@/components/shop/articles";
 import { PurchaseForm } from "@/components/shop/purchase-form";
 import { BiDownArrow } from "react-icons/bi";

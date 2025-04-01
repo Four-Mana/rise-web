@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { FaBandcamp, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa6';
 import { SiSpotify } from 'react-icons/si';
 import breathingAgain from './assets/breathingAgain.png';
 import Image from 'next/image';
 import classNames from 'classnames';
+import { ReactNode } from 'react';
 
 export type variant = 'black' | 'transparent';
 export type AlbumProps = {
@@ -26,7 +27,6 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
             src={breathingAgain}
             alt="Breathing again album"
             placeholder='blur'
-
           />
         </div>
         <div className='flex flex-col gap-3 '>
@@ -45,10 +45,19 @@ export const Album = ({ bgVariant = "transparent", withoutBar }: AlbumProps) => 
   );
 };
 
+export type MusicBarProps = {
+  header?: ReactNode
+}
 
-export const MusicBar = () => {
+
+export const MusicBar = ({ header }: MusicBarProps) => {
   return (
     <div className='mt-12 grid md:gap-6 gap-2'>
+      {header &&
+        <h1 className='tracking-wide font-light text-2xl text-center text-white'>
+          {header}
+        </h1>
+      }
       <div className='flex flex-wrap gap-6 w-full py-4 bg-white/30 justify-center items-center rounded-full'>
         <Link href="https://risemetalband.bandcamp.com/music" className="text-white hover:text-yellow-500 transition-colors">
           <FaBandcamp size={24} />
