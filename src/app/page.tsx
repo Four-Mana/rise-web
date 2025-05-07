@@ -23,7 +23,7 @@ export default function Home() {
 
       <Album />
 
-      <NextConcert bgVariant='black' />
+      {/* <NextConcert bgVariant='black' /> */}
     </main>
   );
 }
