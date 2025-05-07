@@ -31,7 +31,7 @@ export default function Band() {
         </div>
 
         <p className="row-start-1 md:col-start-2 font-light text-wide text-white leading-7">
-          RISE es una banda de Heavy/Thrash Metal originaria de <Highlight>Hortaleza, Madrid</Highlight>, formada en 2016. En abril de 2018, lanzaron su álbum debut, ‘Derange’, que fue grabado, mezclado y masterizado en <Highlight>Moontower Studios</Highlight> por el productor Javi Félez (conocido por su trabajo con Crisix, TaintanBlood, Graveyard, Lizzies, etc.). El álbum, lleno de comentarios políticos, sociales y culturales, recibió grandes elogios tanto de la prensa nacional como internacional. Es un disco contundente, un sonido compacto, directo y lleno de rabia.
+          RISE es una banda de Heavy/Thrash Metal originaria de <Highlight>Hortaleza, Madrid</Highlight>, formada en 2016. En abril de 2018, lanzaron su álbum debut, ‘Derange’, que fue grabado, mezclado y masterizado en <Highlight>Moontower Studios</Highlight> por el productor Javi Félez (conocido por su trabajo con Crisix, TeitanBlood, Graveyard, Lizzies, etc.). El álbum, lleno de comentarios políticos, sociales y culturales, recibió grandes elogios tanto de la prensa nacional como internacional. Es un disco contundente, un sonido compacto, directo y lleno de rabia.
         </p>
 
         <p className="row-start-3 md:row-start-2 md:col-start-1 font-light text-wide text-white leading-7">
