@@ -1,6 +1,6 @@
 import { Logo } from "@/components";
 import { Highlight } from "@/components/highlight";
-import { MusicBar } from "@/components/home";
+import { MusicBar } from "@/components/sections";
 import { TourForm } from "@/components/tour";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <main className="flex flex-col items-center justify-center mt-20 bg-zinc-900 gap-y-6">
+    <main className="flex flex-col min-h-screen items-center justify-center bg-zinc-900 gap-y-6">
       <section className="max-w-5xl px-4">
         <div className="bg-zinc-900 w-full py-10 flex flex-col gap-3 ">
           <div className="mx-auto">

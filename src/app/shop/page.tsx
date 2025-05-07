@@ -1,7 +1,7 @@
 import { Logo } from "@/components";
 
 import { Highlight } from "@/components/highlight";
-import { Album } from "@/components/home";
+import { Album } from "@/components/sections";
 import { Articles } from "@/components/shop/articles";
 import { PurchaseForm } from "@/components/shop/purchase-form";
 import { BiDownArrow } from "react-icons/bi";
@@ -24,7 +24,7 @@ export default function Shop() {
       <Articles />
       <div className="bg-black w-full pt-16 pb-10 px-4 " id="purchase-form">
         <h2 className='tracking-tight font-light text-4xl text-white text-center pb-6'>
-          ¿Te gusta? Pidelo <Highlight>Ahora</Highlight>
+          ¿Te gusta? Pídelo <Highlight>Ahora</Highlight>
         </h2>
         <p className="text-center md:w-1/2 mx-auto">
           Rellena tus datos y nos pondremos en contacto contigo lo antes posible para gestionar el pago y envío.

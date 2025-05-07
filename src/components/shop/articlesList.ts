@@ -37,7 +37,7 @@ export const articlesList: articleListType[] = [
     formName: "frank-tshirt",
     name: "Frank T-Shirt",
     price: "15.00€",
-    variants: "5-6Y|S|M|L|XL",
+    variants: "5-6Y|S|M|L|XL|XXL",
   },
   {
     name: "Breathing Again T-Shirt",
@@ -45,7 +45,7 @@ export const articlesList: articleListType[] = [
     front: AlbumTshirtImg,
     description: "",
     price: "15.00€",
-    variants: "5-6Y|S|M|L|XL",
+    variants: "5-6Y|S|M|L|XL|XXL",
   },
   {
     name: "Derange Album",
@@ -62,7 +62,7 @@ export const articlesList: articleListType[] = [
     back: FrankBackImg,
     description: "",
     price: "22.00€",
-    variants: "5-6Y|S|M|L|XL",
+    variants: "5-6Y|S|M|L|XL|XXL",
   },
   {
     name: "Pack Breathing Again",
@@ -71,7 +71,7 @@ export const articlesList: articleListType[] = [
     back: AlbumTshirtImg,
     description: "",
     price: "22.00€",
-    variants: "5-6Y|S|M|L|XL",
+    variants: "5-6Y|S|M|L|XL|XXL",
   },
 ]
 
