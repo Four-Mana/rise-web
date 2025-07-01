@@ -1,7 +1,7 @@
 import { Logo } from "@/components";
 import { Highlight } from "@/components/highlight";
 import { ContactForm } from "@/components/contact/contact-form";
-import { MusicBar } from "@/components/home";
+import { MusicBar } from "@/components/sections";
 
 export const metadata = {
   title: "Contáctanos - Rise",
