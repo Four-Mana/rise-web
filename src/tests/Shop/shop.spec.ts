@@ -18,7 +18,7 @@ test.describe('Shop page', () => {
       await expect(page.getByText(name)).toBeVisible();
     }
 
-    await page.getByText('Breathing Again Album').click();
+    await page.getByText('Frank T-Shirt').click();
     await expect(page).toHaveURL(/#purchase-form/);
   });
 });
