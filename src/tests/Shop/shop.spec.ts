@@ -1,6 +1,7 @@
 import test, { expect } from '@playwright/test';
 
 const articleNames = [
+  'Breathing Again Album',
   'Frank T-Shirt',
   'Breathing Again T-Shirt',
   'Derange Album',
@@ -12,13 +13,12 @@ test.describe('Shop page', () => {
   test('should display articles and purchase form', async ({ page }) => {
     await page.goto('/shop');
     await expect(page).toHaveTitle(/La Tienda - Rise/);
-    await expect(page.getByText('Breathing Again Album')).toHaveCount(2);
 
     for (const name of articleNames) {
-      await expect(page.getByText(name)).toBeVisible();
+      await expect(page.getByText(name)).toHaveCount(2)
     }
 
-    await page.getByText('Frank T-Shirt').click();
+    await page.getByText('Frank T-Shirt').first().click();
     await expect(page).toHaveURL(/#purchase-form/);
   });
 });
